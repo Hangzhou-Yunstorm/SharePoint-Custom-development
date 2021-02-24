@@ -1,0 +1,93 @@
+﻿
+.inline {
+    display: inline-block !important;
+}
+
+.bars {
+    /*float: right !important;*/
+    width: 100%;
+}
+
+#toolbar {
+    cursor: pointer;
+}
+
+    #toolbar img {
+        border-radius: 2px;
+        float: right;
+    }
+
+    #toolbar input {
+        width: 200px;
+        height: 34px;
+        padding: 6px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        font-style: italic;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    }
+
+
+.search {
+    float: left !important;
+    margin-left: 10px;
+}
+
+    .search .form-control {
+        border-radius: 2px;
+        font-style: italic;
+    }
+
+#f_table {
+    min-height: 1000px;
+    width: 100%;
+    /*padding-left: 20px;*/
+    margin-top: 15px;
+}
+
+.fixed-table-container {
+    border: 0;
+}
+
+#file_table {
+    border-bottom: 0;
+    font-family: "Microsoft YaHei";
+}
+
+    #file_table a {
+        word-break: break-all;
+        cursor: pointer;
+    }
+
+    #file_table tr {
+        border-top: 1px solid #efefef;
+        border-bottom: 1px solid #efefef;
+    }
+
+    #file_table thead tr th {
+        font-weight: 700;
+        color: #4f4f4f;
+    }
+
+    #file_table tr td {
+        border: 0;
+    }
+
+    #file_table tr th {
+        border: 0;
+    }
+
+/*排序按钮位置*/
+.fixed-table-container thead th .sortable {
+    /*background-position: 100px 10px !important;*/
+    padding-left: 8px !important;
+}
+
+.pagination-detail {
+    margin-left: 10px;
+}

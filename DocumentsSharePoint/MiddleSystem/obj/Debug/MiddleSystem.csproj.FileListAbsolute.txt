@@ -1,0 +1,7 @@
+E:\DaHuaGKS\DocumentsSharePoint\MiddleSystem\bin\MiddleSystem.dll.config
+E:\DaHuaGKS\DocumentsSharePoint\MiddleSystem\bin\MiddleSystem.dll
+E:\DaHuaGKS\DocumentsSharePoint\MiddleSystem\bin\MiddleSystem.pdb
+E:\DaHuaGKS\DocumentsSharePoint\MiddleSystem\obj\Debug\MiddleSystem.csprojAssemblyReference.cache
+E:\DaHuaGKS\DocumentsSharePoint\MiddleSystem\obj\Debug\MiddleSystem.csproj.CoreCompileInputs.cache
+E:\DaHuaGKS\DocumentsSharePoint\MiddleSystem\obj\Debug\MiddleSystem.dll
+E:\DaHuaGKS\DocumentsSharePoint\MiddleSystem\obj\Debug\MiddleSystem.pdb

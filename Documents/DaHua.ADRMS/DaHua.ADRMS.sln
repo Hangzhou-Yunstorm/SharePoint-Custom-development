@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaHua.ADRMS", "DaHua.ADRMS.csproj", "{F4F21BCD-6604-4B47-9936-2DDB2E1F4BA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0FE6FDDC-CFD0-4C67-B06E-89ABAB7028BE}"
+	ProjectSection(SolutionItems) = preProject
+		DaHua.ADRMS.sln.vsspell = DaHua.ADRMS.sln.vsspell
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4F21BCD-6604-4B47-9936-2DDB2E1F4BA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F21BCD-6604-4B47-9936-2DDB2E1F4BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F21BCD-6604-4B47-9936-2DDB2E1F4BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F21BCD-6604-4B47-9936-2DDB2E1F4BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.1.0.104:8080/tfs/dahua.adrms
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DaHua.ADRMS.csproj
+		SccLocalPath1 = .
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,150 @@
+﻿
+.contentwrapper, #contentBox, #ms-belltown-table, #mobile_table {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+#sideNavBox {
+    display: none;
+}
+
+#mobile_attr_title {
+    background-color: #f4f4f4;
+    min-height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: "Microsoft YaHei UI","Microsoft YaHei","微软雅黑",SimSun,"宋体", sans-serif;
+}
+
+    #mobile_attr_title #back_div {
+        width: 40px;
+        height: 40px;
+        padding-left: 20px;
+    }
+
+    #mobile_attr_title #name_div {
+        min-height: 40px;
+    }
+
+    #mobile_attr_title img {
+        height: 40px;
+        margin-top: 15px;
+    }
+
+#btn_div {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    margin-top: 30px;
+}
+
+    #btn_div div {
+        width: 50%;
+        float: left;
+        padding-left: 10%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    #btn_div input {
+        width: 80%;
+        height: 30px;
+        font-size: 12px;
+        background-color: #0072C6;
+        color: #fff;
+        padding: 0;
+        margin: 0;
+    }
+
+#mobile_title {
+    background-color: #0072C6;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+    #mobile_title img {
+        height: 40px;
+        margin-top: 5px;
+    }
+
+.mobile_attr {
+    color: #4a4a4a;
+    font-size: 18px;
+    padding: 2% 0 0 5%;
+    height: 80px;
+    border-bottom: 1px solid #e6e6e6;
+    font-family: wf_segoe-ui_semilight,'Segoe UI Semilight','Segoe WP Semilight','Segoe UI','Segoe WP',Tahoma,Arial,sans-serif;
+}
+
+    .mobile_attr td {
+        padding-left: 15px;
+    }
+
+#titleAreaBox {
+    display: none;
+}
+
+.ms-srch-siteSearchResults {
+    width: 94%;
+    padding: 2%;
+    margin: 0;
+}
+
+.ms-srch-sbLarge-navWidth, #SearchBox, .ms-srch-sbLarge, .ms-srch-item-path, .ms-srch-item-body, .ms-srch-item-title, .ms-srch-item-summary {
+    width: 100%;
+}
+
+    .ms-srch-sbLarge > input {
+        padding: 2px 2px 2px 5px;
+        margin: 0;
+        width: calc(100% + (-42px));
+    }
+
+    .ms-srch-sbLarge > .ms-srch-sb-searchLink {
+        height: 32px;
+        width: 32px;
+    }
+
+.ms-srch-item {
+    width: 100%;
+    padding: 5px 0px 5px 0px;
+    margin: 10px 0px 10px 0px;
+}
+
+    .ms-srch-item li {
+        word-break: break-all;
+    }
+
+#s4-workspace, #authWrapper, body, html, form {
+    width: 100% !important;
+}
+
+#ms-belltown-table, .ms-tableRow, .ms-tableCell, .ms-table, #contentBox {
+    display: block;
+}
+
+/*.footer {
+    display: none;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 35px;
+    margin-top: -35px; 
+    clear: both;
+    background: #0072C6;
+    text-align: center;
+    font-size: 13px;
+}*/
+
+/*.footer .copyright {
+        display: block;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        margin: 0 auto;
+        color: #fff;
+    }*/

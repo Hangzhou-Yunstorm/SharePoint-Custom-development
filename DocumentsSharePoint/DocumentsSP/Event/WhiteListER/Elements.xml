@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListTemplateId="100">
+      <Receiver>
+        <Name>WhiteListERItemAdding</Name>
+        <Type>ItemAdding</Type>
+        <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+        <Class>DocumentsSP.Event.WhiteListER.WhiteListER</Class>
+        <SequenceNumber>10000</SequenceNumber>
+      </Receiver>
+  <Receiver>
+<Name>WhiteListERItemUpdating</Name>
+<Type>ItemUpdating</Type>
+<Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+<Class>DocumentsSP.Event.WhiteListER.WhiteListER</Class>
+<SequenceNumber>10000</SequenceNumber>
+</Receiver>
+</Receivers>
+</Elements>

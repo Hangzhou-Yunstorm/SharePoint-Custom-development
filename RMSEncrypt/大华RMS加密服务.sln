@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "大华RMS加密服务", "大华RMS加密服务\大华RMS加密服务.csproj", "{8E98E02E-78DD-43B5-8759-8563AE5466EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{DB62E70A-4A3E-4828-A3C4-78B62B635F4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{EAED6E65-323C-4606-AF54-8D2B71F43C69}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E98E02E-78DD-43B5-8759-8563AE5466EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E98E02E-78DD-43B5-8759-8563AE5466EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E98E02E-78DD-43B5-8759-8563AE5466EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E98E02E-78DD-43B5-8759-8563AE5466EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB62E70A-4A3E-4828-A3C4-78B62B635F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB62E70A-4A3E-4828-A3C4-78B62B635F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB62E70A-4A3E-4828-A3C4-78B62B635F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB62E70A-4A3E-4828-A3C4-78B62B635F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAED6E65-323C-4606-AF54-8D2B71F43C69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAED6E65-323C-4606-AF54-8D2B71F43C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAED6E65-323C-4606-AF54-8D2B71F43C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAED6E65-323C-4606-AF54-8D2B71F43C69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

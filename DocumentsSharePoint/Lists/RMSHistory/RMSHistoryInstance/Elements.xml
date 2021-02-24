@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="RMSHistory" OnQuickLaunch="TRUE" TemplateType="100" Url="Lists/RMSHistory" Description="我的列表实例"></ListInstance>
+</Elements>

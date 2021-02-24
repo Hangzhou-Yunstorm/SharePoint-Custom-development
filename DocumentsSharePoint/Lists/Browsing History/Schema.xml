@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Browsing History" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Browsing History" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100061c259d4d2c4294b9eba0888351dd59" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{128f0499-7b49-45e1-8dee-b99ed316e211}" Name="CreateTime" /><FieldRef ID="{a4ad05b4-eff3-40fd-8837-27984e4a35a8}" Name="Creator" /><FieldRef ID="{a6a6f55b-2bf9-428e-9255-2078b17b13d9}" Name="Folder" /><FieldRef ID="{5ab004a9-6a1f-44a8-9ad4-6bbf53654cbe}" Name="Time" /><FieldRef ID="{acc85738-08ab-4ead-b223-cd76f912cfae}" Name="FID" /><FieldRef ID="{e2e9b239-b4a3-4f62-be54-97ed2a0e44ed}" Name="FileName" /><FieldRef ID="{2aa84dc5-2e2a-4bea-9875-698a9e3383db}" Name="IconUrl" /><FieldRef ID="{abf6b170-5023-44ad-8f5a-94d5e1da1806}" Name="UName" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="CreateTime" ID="{128f0499-7b49-45e1-8dee-b99ed316e211}" DisplayName="CreateTime" Type="DateTime" /><Field Name="Creator" ID="{a4ad05b4-eff3-40fd-8837-27984e4a35a8}" DisplayName="Creator" Type="User" List="UserInfo" /><Field Name="Folder" ID="{a6a6f55b-2bf9-428e-9255-2078b17b13d9}" DisplayName="Folder" Type="URL" /><Field Name="Time" ID="{5ab004a9-6a1f-44a8-9ad4-6bbf53654cbe}" DisplayName="Time" Type="DateTime" /><Field Name="FID" ID="{acc85738-08ab-4ead-b223-cd76f912cfae}" DisplayName="FID" Type="Text" /><Field Name="FileName" ID="{e2e9b239-b4a3-4f62-be54-97ed2a0e44ed}" DisplayName="FileName" Type="URL" /><Field Name="IconUrl" ID="{2aa84dc5-2e2a-4bea-9875-698a9e3383db}" DisplayName="IconUrl" Type="URL" /><Field Name="UName" ID="{abf6b170-5023-44ad-8f5a-94d5e1da1806}" DisplayName="UName" Type="User" List="UserInfo" /></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="Folder" /><FieldRef Name="IconUrl" /><FieldRef Name="FileName" /><FieldRef Name="CreateTime" /><FieldRef Name="Creator" /><FieldRef Name="Time" /><FieldRef Name="FID" /><FieldRef Name="UName" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

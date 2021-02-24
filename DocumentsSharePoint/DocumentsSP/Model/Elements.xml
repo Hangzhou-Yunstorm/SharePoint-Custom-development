@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Model">
+    <File Path="Model\Sample.txt" Url="Model/Sample.txt" />
+  </Module>
+</Elements>

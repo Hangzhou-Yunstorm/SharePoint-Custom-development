@@ -1,0 +1,205 @@
+﻿
+html,
+body,
+form {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    color: #4e4e4e !important;
+}
+
+/*headerLogout样式*/
+.headerLogout {
+    background-color: #f2f2f2;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: right;
+    box-sizing: border-box;
+    display: none;
+}
+
+    .headerLogout a:hover {
+        text-decoration: none;
+    }
+
+    .headerLogout a:visited {
+        text-decoration: none;
+    }
+
+/*nav样式*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#headNav {
+    height: 40px;
+    line-height: 40px;
+    background: #0E60AC;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: none;
+}
+
+#masterul {
+    color: #000;
+    /*overflow: hidden;*/
+}
+
+ul li {
+    list-style: none;
+}
+
+#headNav .nav > li {
+    float: left;
+    position: relative;
+}
+
+    #headNav .nav > li a {
+        color: #fff;
+        display: inline-block;
+        padding: 0 35px;
+        font-size: 14px;
+    }
+
+    #headNav .nav > li > a:hover {
+        color: #fff !important;
+        background-color: #074682 !important;
+        text-decoration: none;
+    }
+
+#headNav .nav .secondNav > li a:hover {
+    color: #0E60AC;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#headNav .nav .oSecondNav > li a:hover {
+    color: #0E60AC;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#headNav .nav > li:hover .secondNav {
+    display: block;
+}
+
+#headNav .nav > li:hover .oSecondNav {
+    display: block;
+}
+
+#headNav .secondNav, #headNav .oSecondNav {
+    display: none;
+    min-width: 100px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #fff;
+}
+
+    #headNav .secondNav > li {
+        height: 32px;
+        line-height: 32px;
+    }
+
+        #headNav .secondNav > li a {
+            padding: 0 20px;
+            /*word-break: keep-all;*/
+            white-space: nowrap;
+            color: #0e60ac;
+        }
+
+#headNav .secondTitle > a {
+    font-size: 14px;
+    font-weight: 400;
+    color: red;
+}
+
+#headNav .oSecondNav > li {
+    float: left;
+    word-break: keep-all;
+    line-height: 32px;
+}
+
+    #headNav .oSecondNav > li a {
+        padding: 0 20px;
+        color: #0e60ac;
+    }
+
+/*问号格式*/
+#question_mark {
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+    #question_mark ul li {
+        display: block;
+        height: 30px;
+        width: 110px;
+        line-height: 30px;
+        position: relative;
+    }
+
+        #question_mark ul li ul li {
+            float: none;
+            background-color: #f2f2f2;
+        }
+
+        #question_mark ul li ul {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            display: none;
+        }
+
+        #question_mark ul li:hover ul {
+            display: block;
+        }
+
+/*footer样式*/
+#ms-belltown-table {
+    padding-bottom: 40px;
+}
+
+.footer {
+    display: none;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 40px;
+    margin-top: -40px; /*等于footer的高度*/
+    clear: both;
+    background: #000;
+}
+
+    .footer .copyright {
+        display: block;
+        width: 1200px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+        color: #fff;
+    }
+
+#page {
+    padding-bottom: 40px;
+}
+
+.contentwrapper {
+    max-width: 1200px;
+    margin: 30px auto 0;
+}
+
+#ms-belltown-table {
+    margin: 0px auto;
+    max-width: 1200px;
+}

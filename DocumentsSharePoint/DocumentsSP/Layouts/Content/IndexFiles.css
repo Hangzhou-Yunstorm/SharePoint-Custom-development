@@ -1,0 +1,59 @@
+﻿
+html,
+body,
+form {
+    font-family: "Microsoft YaHei UI","Microsoft YaHei","微软雅黑",SimSun,"宋体", sans-serif;
+}
+
+.contentwrapper {
+    margin: 0 auto;
+}
+
+#title_div {
+    border-bottom: 1px dashed #ccc;
+    height: 20px;
+    padding-bottom: 30px;
+    margin-top: 20px;
+}
+
+#r_title {
+    float: left;
+    line-height: 25px;
+    font-size: 1.3em;
+    color: #262626;
+    font-weight: 300;
+}
+
+.rightTable {
+    float: left;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.fixed-table-container {
+    border: 0;
+}
+
+#file_table tr td {
+    border: 0;
+    word-break: break-all;
+    font-size: 12px;
+}
+
+#file_table tr th {
+    border: 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #4f4f4f;
+}
+
+.dk_container a {
+    height: 35px !important;
+    line-height: 20px !important;
+}
+
+.fixed-table-toolbar .bars {
+    margin-top: 0px;
+    line-height: 20px;
+    margin-left: 10px;
+}

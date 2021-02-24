@@ -1,0 +1,129 @@
+﻿<Window x:Class="DaHua.ADRMS.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DaHua.ADRMS"
+                 mc:Ignorable="d" 
+               ResizeMode="NoResize" Height="420"  WindowStartupLocation="CenterScreen" Style="{StaticResource CommonLayoutStyle}"  >
+    <Window.Resources>
+        <ResourceDictionary>
+      
+          
+         
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Background="#ffffff">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="120"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80"></ColumnDefinition>
+                <ColumnDefinition Width="310"></ColumnDefinition>
+                  <ColumnDefinition Width="60"></ColumnDefinition>
+                <ColumnDefinition Width="70"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" Style="{StaticResource OpenWindowTxtBlockStyle}" Text="工号/姓名:"/>
+            <TextBox x:Name="FName" Grid.Column="1" Style="{StaticResource OpenwindowgTxtBoxStyle}"/>
+            <TextBlock Grid.Column="2" Margin="5,15,0,0">支持;分割</TextBlock>
+            <Button Grid.Column="3" x:Name="SerachBtn" Height="20" Width="60" Style="{StaticResource ButtonStyle}">搜索</Button>
+            <Button Grid.Column="4" x:Name="SubmitImageBtn" Height="20" Width="60" Style="{StaticResource ButtonStyle}">确认用户</Button>
+        </Grid>
+        <Border BorderThickness="1" Grid.Row="1" BorderBrush="DarkGray" Background="WhiteSmoke"  CornerRadius="1,1,0,0" Width="590" Height="20">
+            <TextBlock Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">查询用户</TextBlock>
+        </Border>
+        <Grid Grid.Row="2">
+
+            <Border BorderThickness="1,0,1,1"   BorderBrush="DarkGray" Background="WhiteSmoke" CornerRadius="0,0,1,1"  Width="590" Height="120">
+
+                <ListView Width="588" MouseDoubleClick="HandleDoubleClick" x:Name="SearchUserList">
+                          <ListView.Resources>
+                    	<Style TargetType="GridViewColumnHeader" BasedOn="{StaticResource AnniGridViewColumnHeaderStyle}">
+					</Style>
+                    </ListView.Resources>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="用户名" DisplayMemberBinding="{Binding Path=FItemName}" Width="100" />
+                            <GridViewColumn Header="邮箱" DisplayMemberBinding="{Binding Path=EMail}" Width="220" />
+                            <GridViewColumn Header="部门" DisplayMemberBinding="{Binding Path=FDeptName}" Width="150" />
+                            <GridViewColumn Width="80">
+                                <GridViewColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>操作</TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.HeaderTemplate>
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock  HorizontalAlignment="Center"  Foreground="#ff0000">添加</TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Border>
+        </Grid>
+        <Border BorderThickness="1" Grid.Row="3" BorderBrush="DarkGray" Background="WhiteSmoke"  CornerRadius="1,1,0,0" Width="590" Height="20">
+            <TextBlock Margin="5,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">选择用户</TextBlock>
+        </Border>
+        <Grid Grid.Row="4">
+            <Border BorderThickness="1,0,1,1"   BorderBrush="DarkGray" Background="WhiteSmoke" CornerRadius="0,0,1,1"  Width="590" Height="150">
+
+                <ListView Width="588" x:Name="ResultUserList" MouseDoubleClick="HandleDoubleRemoveClick">
+                     <ListView.Resources>
+                    	<Style TargetType="GridViewColumnHeader" BasedOn="{StaticResource AnniGridViewColumnHeaderStyle}">
+					</Style>
+                    </ListView.Resources>
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="用户名" DisplayMemberBinding="{Binding Path=FItemName}" Width="80" />
+                            <GridViewColumn Header="邮箱" DisplayMemberBinding="{Binding Path=EMail}" Width="220" />
+                            <GridViewColumn Header="部门" DisplayMemberBinding="{Binding Path=FDeptName}" Width="150" />
+                             <GridViewColumn Width="80">
+                                <GridViewColumn.HeaderTemplate>
+                                    <DataTemplate>
+                                        <TextBlock HorizontalAlignment="Center">操作</TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.HeaderTemplate>
+                                <GridViewColumn.CellTemplate >
+                                    <DataTemplate>
+                                        <TextBlock HorizontalAlignment="Center"  Foreground="#ff0000">移除</TextBlock>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Border>
+        </Grid>
+        <!--<WrapPanel Grid.Row="1" Width="490" >
+			<StackPanel  Style="{StaticResource OpenWindowPanelStyle}">
+				<TextBlock Style="{StaticResource OpenWindowTxtBlockStyle}" Text="工号/姓名:"/>
+				<TextBox x:Name="FName" Style="{StaticResource OpenwindowgTxtBoxStyle}"/>
+			</StackPanel>
+
+			<StackPanel  Style="{StaticResource OpenWindowPanelStyle}">
+				<TextBlock Style="{StaticResource OpenWindowTxtBlockStyle}" Text="邮箱:"/>
+				<TextBox x:Name="FMail" IsReadOnly="True" Style="{StaticResource OpenwindowgTxtBoxStyle}"/>
+			</StackPanel>
+			<StackPanel  Style="{StaticResource OpenWindowPanelStyle}">
+				<TextBlock Style="{StaticResource OpenWindowTxtBlockStyle}" Text="部门:"/>
+				<TextBox x:Name="FCompany" IsReadOnly="True" Style="{StaticResource OpenwindowgTxtBoxStyle}"/>
+			</StackPanel>
+			<StackPanel Style="{StaticResource OpenWindowPanelStyle}"  >
+			
+				<Button x:Name="SubmitImageBtn"  Width="120" Margin="120,0,0,0"  Height="39" >
+				 <Image Source="/Resources/Images/SaveFmail.png"></Image>
+				</Button>
+			</StackPanel>
+		
+		</WrapPanel>-->
+    </Grid>
+</Window>

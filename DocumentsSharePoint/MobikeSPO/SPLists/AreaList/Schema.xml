@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="AreaList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/AreaList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x01009ae15c28c09a43128c5c622a3a8e6e40" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{ac3eb56e-a0d2-43d2-b460-16a81814333e}" Name="Administrator" /><FieldRef ID="{d99493e7-0af6-49d9-b2da-ab267b26b2d7}" Name="AreaDescription" /><FieldRef ID="{dd7c4255-df2b-49ea-a31a-3ea3982b79d9}" Name="Email" /><FieldRef ID="{5e4c8931-83de-499e-93be-b93635afc322}" Name="IconImg" /><FieldRef ID="{7a01a404-290b-4ed0-9a27-b1b111b1431f}" Name="IsShowAdmin" /><FieldRef ID="{ea2f8c63-7335-4cfa-9660-5ac7bfe397fc}" Name="IsShowMsg" /><FieldRef ID="{1a14590a-1d1f-4fe7-bdaa-604c12d045c1}" Name="NavOrder" /><FieldRef ID="{5a28fada-d231-4ffb-9926-1d213fb1b0c1}" Name="ParentArea" /><FieldRef ID="{89dee0f4-6b24-43ae-bdf1-78fb28ab4c3b}" Name="RightTitle" /><FieldRef ID="{bbc96321-7f32-4e1b-ba72-242f5e6ed79a}" Name="ServiceLine" /><FieldRef ID="{0d2b5d41-9a1e-461b-af03-fa9c13b3ca76}" Name="SubTitle" /><FieldRef ID="{e1d3f8fc-aa7e-4f78-bdb7-97aeb6351ed2}" Name="TitleImg" /><FieldRef ID="{e1671752-fac4-48c8-8ed9-d2cb3b3315e8}" Name="WeChat" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="Administrator" ID="{ac3eb56e-a0d2-43d2-b460-16a81814333e}" DisplayName="Administrator" Type="User" List="UserInfo" /><Field Name="AreaDescription" ID="{d99493e7-0af6-49d9-b2da-ab267b26b2d7}" DisplayName="AreaDescription" Type="Text" /><Field Name="Email" ID="{dd7c4255-df2b-49ea-a31a-3ea3982b79d9}" DisplayName="Email" Type="Text" /><Field Name="IconImg" ID="{5e4c8931-83de-499e-93be-b93635afc322}" DisplayName="IconImg" Type="Text" /><Field Name="IsShowAdmin" ID="{7a01a404-290b-4ed0-9a27-b1b111b1431f}" DisplayName="IsShowAdmin" Type="Boolean" /><Field Name="IsShowMsg" ID="{ea2f8c63-7335-4cfa-9660-5ac7bfe397fc}" DisplayName="IsShowMsg" Type="Boolean" /><Field Name="NavOrder" ID="{1a14590a-1d1f-4fe7-bdaa-604c12d045c1}" DisplayName="NavOrder" Type="Number" /><Field Name="ParentArea" ID="{5a28fada-d231-4ffb-9926-1d213fb1b0c1}" DisplayName="ParentArea" Type="Lookup" /><Field Name="RightTitle" ID="{89dee0f4-6b24-43ae-bdf1-78fb28ab4c3b}" DisplayName="RightTitle" Type="Text" /><Field Name="ServiceLine" ID="{bbc96321-7f32-4e1b-ba72-242f5e6ed79a}" DisplayName="ServiceLine" Type="Text" /><Field Name="SubTitle" ID="{0d2b5d41-9a1e-461b-af03-fa9c13b3ca76}" DisplayName="SubTitle" Type="Text" /><Field Name="TitleImg" ID="{e1d3f8fc-aa7e-4f78-bdb7-97aeb6351ed2}" DisplayName="TitleImg" Type="Note" /><Field Name="WeChat" ID="{e1671752-fac4-48c8-8ed9-d2cb3b3315e8}" DisplayName="WeChat" Type="Text" /></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="Administrator" /><FieldRef Name="AreaDescription" /><FieldRef Name="Email" /><FieldRef Name="IconImg" /><FieldRef Name="IsShowAdmin" /><FieldRef Name="IsShowMsg" /><FieldRef Name="NavOrder" /><FieldRef Name="ParentArea" /><FieldRef Name="RightTitle" /><FieldRef Name="ServiceLine" /><FieldRef Name="SubTitle" /><FieldRef Name="TitleImg" /><FieldRef Name="WeChat" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

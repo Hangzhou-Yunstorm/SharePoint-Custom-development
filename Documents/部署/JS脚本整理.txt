@@ -1,0 +1,85 @@
+1、MyUpload
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/MyUpload.js"></script>
+
+2、MyDownload
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/MyDownload.js"></script>
+
+3、Myrequest
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/MyRequest.js"></script>
+
+4、PendingwithMe
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/PendingwithMe.js"></script>
+
+5、ApprovedRequest
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/ApprovedRequest.js"></script>
+
+6、RejectedRequest
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/RejectedRequest.js"></script>
+
+7、Authorization
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/Authorization.js"></script>
+
+8、PermissionSettings 涙
+
+9、Whitelist.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/Whitelist.js"></script>
+
+10、FileLogs
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/FileLogs.js"></script>
+
+13、Home Gallery.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/Carousel.js"></script>
+
+14、/Documents/Forms/AllItems.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/AllItems.js"></script>
+<script type="text/javascript" src="/_layouts/15/Plugins/zTree/js/jquery.ztree.all-3.5.min.js"></script>
+
+15、/Lists/Browsing%20History/AllItems.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/BrowsingHistory.js"></script>
+
+16、/Documents/Forms/LatestFiles.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/Lastest.js"></script>
+
+17、/Documents/Forms/MostDownLoadFiles.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/MostDown.js"></script>
+
+18、Suggestion
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/FeedbackList.js"></script>
+
+/// 2豚
+
+19、/Lists/SubscribeList/AllItems.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/SubscribeList.js"></script>
+
+20、ShareCatalogList
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/ShareCatalogList.js"></script>
+
+21、SubscribeDirectoryList
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/SubscribeDirectoryList.js"></script>
+
+22、ReportManageList.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/ReportManage.js"></script>
+
+23、ExternalUserList
+<script type="text/javascript" src="/_layouts/15/Scripts/LeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/ExternalUserLogin.js"></script>
+
+24、ExternalUserList ！！ EditForm
+<script type="text/javascript" src="/_layouts/15/Scripts/jquery.SP.RegionCountry.js"></script>
+
+25、Folder ！！ EditForm
+<script type="text/javascript" src="/_layouts/15/Scripts/defaultfolder.js"></script>

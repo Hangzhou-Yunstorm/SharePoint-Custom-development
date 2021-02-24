@@ -1,0 +1,87 @@
+﻿html,
+body,
+form {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: 'microsofr yahei';
+}
+
+#container {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+}
+
+#body {
+    padding-bottom: 60px; /*高度等于footer的高度*/
+    max-width: 1200px;
+}
+
+#footer {
+    position: relative;
+    margin-top: -50px; /*等于footer的高度*/
+    height: 50px;
+    clear: both;
+    background-color: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#mySearchBox {
+    float: right;
+    padding-right: 20px;
+}
+
+    #mySearchBox input {
+        float: left;
+        display: inline-block;
+        border: 2px solid #0089CD;
+        width: 240px;
+        height: 40px;
+        box-sizing: border-box;
+        padding-left: 5px;
+    }
+
+.headerContent {
+    height: 30px;
+    /*background-color: #f7f7f7;*/
+}
+
+.logo_div {
+    height: 100px;
+    padding-top: 28px;
+    padding-left: 28px;
+    /*box-shadow: 0 6px 6px #eee;*/
+    box-shadow: 0 3px 3px 0 rgba(91,91,91,0.16);
+    background-color: #f7f7f7;
+}
+
+.fred {
+    color: #da0124;
+}
+
+.fblue {
+    color: #337ab7;
+}
+
+.admin {
+    height: 30px;
+    line-height: 30px;
+    margin-right: 20px;
+}
+
+.footerContent {
+    max-width: 1200px;
+    height: 50px;
+    line-height: 50px;
+}
+
+a:hover {
+    text-decoration: none;
+}

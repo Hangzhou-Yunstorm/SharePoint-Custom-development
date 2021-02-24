@@ -1,0 +1,131 @@
+﻿
+.review {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.leftTree {
+    float: left;
+    width: 220px;
+    height: 520px;
+    border: 1px solid #eee;
+    margin-right: 20px;
+    background-color: #eee;
+    box-sizing: border-box;
+}
+
+    .leftTree ul li {
+        list-style: none;
+    }
+
+    .leftTree h4 {
+        height: 32px;
+        line-height: 32px;
+        padding-left: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .leftTree .myTitle {
+        width: 100%;
+        height: 34px;
+        line-height: 34px;
+        padding-left: 20px;
+        background-color: #0E60AC;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: #fff;
+        font-weight: normal;
+        margin: 0;
+    }
+
+.second a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #4e4e4e;
+    padding-left: 40px;
+}
+
+    .second a :active {
+        color: blue;
+    }
+
+.primaryDir {
+    margin-bottom: 10px;
+}
+
+.leftTree .upBtn {
+    display: block;
+    margin: 30px auto 0;
+    background-color: #199ED8;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+    border: 0;
+    cursor: pointer;
+}
+
+    .leftTree .upBtn:hover {
+        background-color: #199ED8;
+    }
+
+.rightTable {
+    float: left;
+    width: 960px;
+    box-sizing: border-box;
+}
+
+.fixed-table-container {
+    border: 0;
+}
+
+#log_table tr td {
+    border: 0;
+    word-break: break-all;
+    font-size: 13px;
+}
+
+#log_table tr th {
+    border: 0;
+    font-size: 13px;
+}
+
+.dk_container a {
+    height: 35px !important;
+    line-height: 20px !important;
+}
+
+.fixed-table-toolbar .bars {
+    margin-top: 0px;
+    line-height: 20px;
+    margin-left: 10px;
+    width: calc(100% + (-10px));
+}
+
+#search_date, #search_key {
+    width: 180px;
+    height: 35px;
+}
+
+#search_btn {
+    width: 80px;
+    background-color: #0E60AC;
+    color: #fff;
+    font-size: 13px;
+    height: 35px;
+}
+
+#maintain_btn {
+    width: 80px;
+    background-color: #0E60AC;
+    color: #fff;
+    font-size: 13px;
+    height: 35px;
+    float: right;
+    display: none;
+}

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="RMSTask" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/RMSTask" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x01006bb5f0b8b4b64528bba6d26d67de1fc1" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{3f0167d4-ed5e-42e2-980e-363f1db75a15}" Name="SourcePath" /><FieldRef ID="{dc93c09f-e7cb-4408-a3fc-b4d543021dd7}" Name="RMSPath" /><FieldRef ID="{e2072183-ce6f-47b0-bed3-a5d4aa0be845}" Name="IsFullControl" /><FieldRef ID="{88431f12-db17-432c-8d71-8424fa439a34}" Name="IsRead" /><FieldRef ID="{2cc4b806-5876-4f1b-91d1-5ee56ae9ae84}" Name="IsPrint" /><FieldRef ID="{510dddc8-886a-46e9-9ebd-c5efd0979396}" Name="IsSave" /><FieldRef ID="{7ea93179-1bcd-4921-bad3-177e1c3ad8a9}" Name="IsEdit" /><FieldRef ID="{bc5274d2-9d54-45e9-a2d3-1ae1d00a6df8}" Name="Users" /><FieldRef ID="{5d1b1caf-b9b5-4bff-9e0d-c19129472a68}" Name="State" /><FieldRef ID="{40620c2c-8002-4666-9d8b-50fa80411d46}" Name="Content1" /><FieldRef ID="{6d80c096-670f-432e-a6d0-0f98ec5d03ca}" Name="FID" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="SourcePath" ID="{3f0167d4-ed5e-42e2-980e-363f1db75a15}" DisplayName="SourcePath" Type="Note" /><Field Name="RMSPath" ID="{dc93c09f-e7cb-4408-a3fc-b4d543021dd7}" DisplayName="RMSPath" Type="Note" /><Field Name="IsFullControl" ID="{e2072183-ce6f-47b0-bed3-a5d4aa0be845}" DisplayName="IsFullControl" Type="Boolean" /><Field Name="IsRead" ID="{88431f12-db17-432c-8d71-8424fa439a34}" DisplayName="IsRead" Type="Boolean" /><Field Name="IsPrint" ID="{2cc4b806-5876-4f1b-91d1-5ee56ae9ae84}" DisplayName="IsPrint" Type="Boolean" /><Field Name="IsSave" ID="{510dddc8-886a-46e9-9ebd-c5efd0979396}" DisplayName="IsSave" Type="Boolean" /><Field Name="IsEdit" ID="{7ea93179-1bcd-4921-bad3-177e1c3ad8a9}" DisplayName="IsEdit" Type="Boolean" /><Field Name="Users" ID="{bc5274d2-9d54-45e9-a2d3-1ae1d00a6df8}" DisplayName="Users" Type="UserMulti" Mult="TRUE" /><Field Name="State" ID="{5d1b1caf-b9b5-4bff-9e0d-c19129472a68}" DisplayName="State" Type="Boolean" /><Field Name="Content1" ID="{40620c2c-8002-4666-9d8b-50fa80411d46}" DisplayName="Content" Type="Note" /><Field Name="FID" ID="{6d80c096-670f-432e-a6d0-0f98ec5d03ca}" DisplayName="FID" Type="Text" /></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="SourcePath" /><FieldRef Name="RMSPath" /><FieldRef Name="IsFullControl" /><FieldRef Name="IsRead" /><FieldRef Name="IsPrint" /><FieldRef Name="IsSave" /><FieldRef Name="IsEdit" /><FieldRef Name="Users" /><FieldRef Name="State" /><FieldRef Name="Content1" /><FieldRef Name="FID" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

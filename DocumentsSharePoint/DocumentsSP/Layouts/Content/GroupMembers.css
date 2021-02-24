@@ -1,0 +1,38 @@
+﻿
+.review {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.addBtn, .delBtn {
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.editBtn {
+    cursor: pointer;
+}
+
+.rightTable {
+    float: left;
+    width: 1000px;
+    box-sizing: border-box;
+}
+
+.groupImg {
+    width: 36px;
+    height: 20px;
+}
+
+.fixed-table-container {
+    border: 0;
+}
+
+#group_table tr td {
+    border: 0;
+}
+
+#group_table tr th {
+    border: 0;
+}

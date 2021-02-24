@@ -1,0 +1,12 @@
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\obj\Debug\ExternalSystem.csprojAssemblyReference.cache
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\obj\Debug\ExternalSystem.csproj.CoreCompileInputs.cache
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\bin\ExternalSystem.dll.config
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\bin\ExternalSystem.dll
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\bin\ExternalSystem.pdb
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\bin\Microsoft.Web.Administration.dll
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\bin\Microsoft.IdentityModel.Extensions.dll
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\bin\DocumentFormat.OpenXml.dll
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\bin\DocumentFormat.OpenXml.xml
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\obj\Debug\ExternalSystem.csproj.CopyComplete
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\obj\Debug\ExternalSystem.dll
+E:\DaHuaGKS\DocumentsSharePoint\ExternalSystem\obj\Debug\ExternalSystem.pdb

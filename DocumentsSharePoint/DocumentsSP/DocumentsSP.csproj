@@ -1,0 +1,1362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C92F7139-1E8C-4121-93A5-67C08142EB84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DocumentsSP</RootNamespace>
+    <AssemblyName>DocumentsSP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>14.5</MinimumOfficeToolsVersion>
+    <SandboxedSolution>False</SandboxedSolution>
+    <TokenReplacementFileExtensions>ashx</TokenReplacementFileExtensions>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="Microsoft.Web.CommandUI, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControlTemplates\HideRibbonUC.ascx.cs">
+      <DependentUpon>HideRibbonUC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlTemplates\HideRibbonUC.ascx.designer.cs">
+      <DependentUpon>HideRibbonUC.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomWebPart\Carousel\Carousel.ascx.cs">
+      <DependentUpon>Carousel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomWebPart\Carousel\Carousel.ascx.g.cs">
+      <DependentUpon>Carousel.ascx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CustomWebPart\Left\Left.ascx.cs">
+      <DependentUpon>Left.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomWebPart\Left\Left.ascx.g.cs">
+      <DependentUpon>Left.ascx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DBHelper\BllHelper.cs" />
+    <Compile Include="DBHelper\DBHelperSql.cs" />
+    <Compile Include="DBHelper\GroupUser.cs" />
+    <Compile Include="DBHelper\PubConstant.cs" />
+    <Compile Include="Event\CarouselER\CarouselER.cs" />
+    <Compile Include="Event\EventReceiverRMSHandle\EventReceiverRMSHandle.cs" />
+    <Compile Include="Event\WhiteListER\WhiteListER.cs" />
+    <Compile Include="Helper\DeleteDownloadTimer.cs" />
+    <Compile Include="Helper\GetDocumentCalculatedTimer.cs" />
+    <Compile Include="Helper\Log\ErrorMessageModel.cs" />
+    <Compile Include="Helper\Log\XMLHelper.cs" />
+    <Compile Include="Layouts\ChangeDepartment.aspx.cs">
+      <DependentUpon>ChangeDepartment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\ChangeDepartment.aspx.designer.cs">
+      <DependentUpon>ChangeDepartment.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\DepartDownloadsReport.aspx.cs">
+      <DependentUpon>DepartDownloadsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\DepartDownloadsReport.aspx.designer.cs">
+      <DependentUpon>DepartDownloadsReport.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\DepartmentUploadsReport.aspx.cs">
+      <DependentUpon>DepartmentUploadsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\DepartmentUploadsReport.aspx.designer.cs">
+      <DependentUpon>DepartmentUploadsReport.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\DocumentsScoreReport.aspx.cs">
+      <DependentUpon>DocumentsScoreReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\DocumentsScoreReport.aspx.designer.cs">
+      <DependentUpon>DocumentsScoreReport.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GKSData.aspx.cs">
+      <DependentUpon>GKSData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\GKSData.aspx.designer.cs">
+      <DependentUpon>GKSData.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MoFileView.aspx.cs">
+      <DependentUpon>MoFileView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MoFileView.aspx.designer.cs">
+      <DependentUpon>MoFileView.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GetTree.ashx.cs">
+      <DependentUpon>GetTree.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GetTree.ashx.designer.cs">
+      <DependentUpon>GetTree.ashx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GetMoWaterMark.ashx.cs">
+      <DependentUpon>GetMoWaterMark.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GetMoWaterMark.ashx.designer.cs">
+      <DependentUpon>GetMoWaterMark.ashx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GetWaterMark.ashx.cs">
+      <DependentUpon>GetWaterMark.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GetWaterMark.ashx.designer.cs">
+      <DependentUpon>GetWaterMark.ashx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\LatestFiles.aspx.cs">
+      <DependentUpon>LatestFiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\LatestFiles.aspx.designer.cs">
+      <DependentUpon>LatestFiles.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\LogList.aspx.cs">
+      <DependentUpon>LogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\LogList.aspx.designer.cs">
+      <DependentUpon>LogList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MblDownload.aspx.cs">
+      <DependentUpon>MblDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MblDownload.aspx.designer.cs">
+      <DependentUpon>MblDownload.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MostDownLoadFiles.aspx.cs">
+      <DependentUpon>MostDownLoadFiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MostDownLoadFiles.aspx.designer.cs">
+      <DependentUpon>MostDownLoadFiles.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MostDownloadsReport.aspx.cs">
+      <DependentUpon>MostDownloadsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MostDownloadsReport.aspx.designer.cs">
+      <DependentUpon>MostDownloadsReport.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\RegionFiles.aspx.cs">
+      <DependentUpon>RegionFiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\RegionFiles.aspx.designer.cs">
+      <DependentUpon>RegionFiles.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SelectExternalUser.aspx.cs">
+      <DependentUpon>SelectExternalUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SelectExternalUser.aspx.designer.cs">
+      <DependentUpon>SelectExternalUser.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SubscribeDownload.aspx.cs">
+      <DependentUpon>SubscribeDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SubscribeDownload.aspx.designer.cs">
+      <DependentUpon>SubscribeDownload.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SubscribeMulDownload.aspx.cs">
+      <DependentUpon>SubscribeMulDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SubscribeMulDownload.aspx.designer.cs">
+      <DependentUpon>SubscribeMulDownload.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SystemUseReport.aspx.cs">
+      <DependentUpon>SystemUseReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SystemUseReport.aspx.designer.cs">
+      <DependentUpon>SystemUseReport.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\UploadFileList.ashx.cs">
+      <DependentUpon>UploadFileList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\UploadFileList.ashx.designer.cs">
+      <DependentUpon>UploadFileList.ashx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\UploadFiles.aspx.cs">
+      <DependentUpon>UploadFiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\UploadFiles.aspx.designer.cs">
+      <DependentUpon>UploadFiles.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\UserUploadsReport.aspx.cs">
+      <DependentUpon>UserUploadsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\UserUploadsReport.aspx.designer.cs">
+      <DependentUpon>UserUploadsReport.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\WebPartContent.aspx.cs">
+      <DependentUpon>WebPartContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\WebPartContent.aspx.designer.cs">
+      <DependentUpon>WebPartContent.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CommentModel.cs" />
+    <Compile Include="Model\DepartModel.cs" />
+    <Compile Include="Helper\EmailHelper.cs" />
+    <Compile Include="Helper\CommonHelper.cs" />
+    <Compile Include="Model\DocumentCalculatedModel.cs" />
+    <Compile Include="Model\ExternalUserModel.cs" />
+    <Compile Include="Model\FileModel.cs" />
+    <Compile Include="Model\GroupModel.cs" />
+    <Compile Include="Model\HReportModel.cs" />
+    <Compile Include="Model\LogListModel.cs" />
+    <Compile Include="Model\LogModel.cs" />
+    <Compile Include="Model\DownLoadModel.cs" />
+    <Compile Include="Model\MembersModel.cs" />
+    <Compile Include="Model\NavModel.cs" />
+    <Compile Include="Model\ReportModel.cs" />
+    <Compile Include="Model\TFolderModel.cs" />
+    <Compile Include="Model\UserModel.cs" />
+    <Compile Include="Layouts\AddUsers.aspx.cs">
+      <DependentUpon>AddUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\AddUsers.aspx.designer.cs">
+      <DependentUpon>AddUsers.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\BHDownload.aspx.cs">
+      <DependentUpon>BHDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\BHDownload.aspx.designer.cs">
+      <DependentUpon>BHDownload.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\BHMulDownload.aspx.cs">
+      <DependentUpon>BHMulDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\BHMulDownload.aspx.designer.cs">
+      <DependentUpon>BHMulDownload.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\EditUsers.aspx.cs">
+      <DependentUpon>EditUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\EditUsers.aspx.designer.cs">
+      <DependentUpon>EditUsers.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\FileDetail.aspx.cs">
+      <DependentUpon>FileDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\FileDetail.aspx.designer.cs">
+      <DependentUpon>FileDetail.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\FileDownload.aspx.cs">
+      <DependentUpon>FileDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\FileDownload.aspx.designer.cs">
+      <DependentUpon>FileDownload.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\FolderTree.aspx.cs">
+      <DependentUpon>FolderTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\FolderTree.aspx.designer.cs">
+      <DependentUpon>FolderTree.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GetNav.aspx.cs">
+      <DependentUpon>GetNav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\GetNav.aspx.designer.cs">
+      <DependentUpon>GetNav.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\GroupMembers.aspx.cs">
+      <DependentUpon>GroupMembers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\GroupMembers.aspx.designer.cs">
+      <DependentUpon>GroupMembers.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\MulDownload.aspx.cs">
+      <DependentUpon>MulDownload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\MulDownload.aspx.designer.cs">
+      <DependentUpon>MulDownload.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\ReturnFolder.aspx.cs">
+      <DependentUpon>ReturnFolder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\ReturnFolder.aspx.designer.cs">
+      <DependentUpon>ReturnFolder.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\SearchResults.aspx.cs">
+      <DependentUpon>SearchResults.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\SearchResults.aspx.designer.cs">
+      <DependentUpon>SearchResults.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\UserGroups.aspx.cs">
+      <DependentUpon>UserGroups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\UserGroups.aspx.designer.cs">
+      <DependentUpon>UserGroups.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\ViewError.aspx.cs">
+      <DependentUpon>ViewError.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\ViewError.aspx.designer.cs">
+      <DependentUpon>ViewError.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\SPMain.Master.cs">
+      <DependentUpon>SPMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\SPMain.Master.designer.cs">
+      <DependentUpon>SPMain.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CustomWebPart\Right\Right.ascx.cs">
+      <DependentUpon>Right.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomWebPart\Right\Right.ascx.g.cs">
+      <DependentUpon>Right.ascx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ControlTemplates\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{af109956-9552-4b9c-a0e9-19f0a7430266}</SharePointProjectItemId>
+    </None>
+    <None Include="CustomWebPart\Carousel\Carousel.webpart" />
+    <None Include="CustomWebPart\Carousel\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{127c4553-af0b-4c36-bc75-b1787efaeff4}</SharePointProjectItemId>
+    </None>
+    <None Include="CustomWebPart\Left\Left.webpart" />
+    <None Include="CustomWebPart\Left\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1274620b-6d11-49b1-a004-068a7d47622a}</SharePointProjectItemId>
+    </None>
+    <None Include="DBHelper\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{34293efe-7ecb-4745-a398-1753761ded7f}</SharePointProjectItemId>
+    </None>
+    <None Include="Event\CarouselER\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{99f20eaf-1ea8-4077-8372-6439da2404da}</SharePointProjectItemId>
+    </None>
+    <None Include="Event\EventReceiverRMSHandle\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{eb51c68d-6036-4667-944d-3195a2b61e57}</SharePointProjectItemId>
+    </None>
+    <None Include="Event\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{98560ad7-096f-48f8-bbe7-4da4c5eebb1f}</SharePointProjectItemId>
+    </None>
+    <None Include="Event\WhiteListER\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f8ce66ea-0596-4018-a9b9-77268db8ba3a}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{9bfac523-bbb2-44c8-8454-30f794329491}</FeatureId>
+    </None>
+    <None Include="Helper\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d0782991-f62f-4060-a64f-92ceb58f2957}</SharePointProjectItemId>
+    </None>
+    <None Include="Images\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bb13d602-214f-4be7-9f62-b5d6e19695fb}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\GetTree.ashx" />
+    <None Include="Layouts\GetMoWaterMark.ashx" />
+    <None Include="Layouts\GetWaterMark.ashx" />
+    <None Include="Layouts\Plugins\bootstrap\css\bootstrap-theme.css.map" />
+    <None Include="Layouts\Plugins\bootstrap\css\bootstrap.css.map" />
+    <None Include="Layouts\Plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Layouts\Plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="Layouts\Plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="Layouts\Plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Layouts\Plugins\DropKick\css\blank_theme.scss" />
+    <None Include="Layouts\Plugins\DropKick\css\dropkick.scss" />
+    <None Include="Layouts\Plugins\laydate-v5\laydate\theme\default\font\iconfont.eot" />
+    <None Include="Layouts\Plugins\laydate-v5\laydate\theme\default\font\iconfont.ttf" />
+    <None Include="Layouts\Plugins\laydate-v5\laydate\theme\default\font\iconfont.woff" />
+    <None Include="Layouts\Plugins\zTree\.gitignore" />
+    <None Include="Layouts\Plugins\zTree\css\awesomeStyle\awesome.less" />
+    <None Include="Layouts\Plugins\zTree\css\awesomeStyle\fa.less" />
+    <None Include="Layouts\Plugins\zTree\demo\cn\asyncData\getNodes.php" />
+    <None Include="Layouts\Plugins\zTree\demo\cn\asyncData\getNodesForBigData.php" />
+    <None Include="Layouts\Plugins\zTree\demo\en\asyncData\getNodes.php" />
+    <None Include="Layouts\Plugins\zTree\demo\en\asyncData\getNodesForBigData.php" />
+    <None Include="Layouts\Plugins\zTree\README.md" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ee30417e-3748-4d29-b0f7-c2e1eed095fe}</SharePointProjectItemId>
+    </None>
+    <None Include="Layouts\UploadFileList.ashx" />
+    <None Include="Master\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{906da9e5-2495-4a82-8dc2-2f4b55ddad8c}</SharePointProjectItemId>
+    </None>
+    <None Include="Master\SPMain.Master" />
+    <None Include="Model\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f6a6cfa9-ec3b-42c9-9158-9ca23159fa42}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{1f705b88-0dae-41d1-bf5d-9fe68e27b65c}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="CustomWebPart\Right\Right.webpart" />
+    <None Include="CustomWebPart\Right\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4f8a317b-cfcd-4dca-b456-80498ac17e82}</SharePointProjectItemId>
+    </None>
+    <None Include="CustomWebPart\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{651e7904-e9e1-4424-9cfb-60b6817adfac}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Layouts\Plugins\zTree\zTree_v3\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlTemplates\HideRibbonUC.ascx" />
+    <Content Include="CustomWebPart\Carousel\Carousel.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>Carousel.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="CustomWebPart\Carousel\Elements.xml" />
+    <Content Include="CustomWebPart\Left\Elements.xml" />
+    <Content Include="CustomWebPart\Left\Left.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>Left.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="DBHelper\Elements.xml" />
+    <Content Include="DBHelper\Sample.txt" />
+    <Content Include="Event\CarouselER\Elements.xml" />
+    <Content Include="Event\Elements.xml" />
+    <Content Include="Event\EventReceiverRMSHandle\Elements.xml" />
+    <Content Include="Event\Sample.txt" />
+    <Content Include="Event\WhiteListER\Elements.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Helper\Elements.xml" />
+    <Content Include="Helper\Sample.txt" />
+    <Content Include="Images\48_icdoc.png" />
+    <Content Include="Images\48_icpptx.png" />
+    <Content Include="Images\48_icxls.png" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\back.png" />
+    <Content Include="Images\back_d.png" />
+    <Content Include="Images\cmp.png" />
+    <Content Include="Images\copy.png" />
+    <Content Include="Images\CountryM.png" />
+    <Content Include="Images\del.png" />
+    <Content Include="Images\down1.png" />
+    <Content Include="Images\download.png" />
+    <Content Include="Images\dw.gif" />
+    <Content Include="Images\edit.png" />
+    <Content Include="Images\export.png" />
+    <Content Include="Images\group.png" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\mailpush.png" />
+    <Content Include="Images\MblSearch.png" />
+    <Content Include="Images\more.png" />
+    <Content Include="Images\permission\aauth.png" />
+    <Content Include="Images\permission\ar.png" />
+    <Content Include="Images\permission\auth.png" />
+    <Content Include="Images\permission\cp.png" />
+    <Content Include="Images\permission\dup.png" />
+    <Content Include="Images\permission\eup.png" />
+    <Content Include="Images\permission\gp.png" />
+    <Content Include="Images\permission\mp.png" />
+    <Content Include="Images\permission\rup.png" />
+    <Content Include="Images\permission\sip.png" />
+    <Content Include="Images\question.png" />
+    <Content Include="Images\RegionM.png" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\search2.png" />
+    <Content Include="Images\setting.png" />
+    <Content Include="Images\share.png" />
+    <Content Include="Images\share2.png" />
+    <Content Include="Images\subscribe.png" />
+    <Content Include="Images\SwitchSite.png" />
+    <Content Include="Images\treel.gif" />
+    <Content Include="Images\unsub.png" />
+    <Content Include="Images\upload1.png" />
+    <Content Include="Images\upload2.png" />
+    <Content Include="Images\upload3.png" />
+    <Content Include="Images\user.png" />
+    <Content Include="Layouts\AddUsers.aspx" />
+    <Content Include="Layouts\BHDownload.aspx" />
+    <Content Include="Layouts\BHMulDownload.aspx" />
+    <Content Include="Layouts\ChangeDepartment.aspx" />
+    <Content Include="Layouts\Content\UploadFiles.css" />
+    <Content Include="Layouts\Content\Mobile.css" />
+    <Content Include="Layouts\Content\ShowMaster.css" />
+    <Content Include="Layouts\Content\IndexFiles.css" />
+    <Content Include="Layouts\Content\LogList.css" />
+    <Content Include="Layouts\Content\NoAddPermission.css" />
+    <Content Include="Layouts\Content\Report.css" />
+    <Content Include="Layouts\Content\SelectExternalUser.css" />
+    <Content Include="Layouts\Content\Whitelist.css" />
+    <Content Include="Layouts\Content\Carousel.css" />
+    <Content Include="Layouts\Content\common.css" />
+    <Content Include="Layouts\Content\ECB.css" />
+    <Content Include="Layouts\Content\SetTitle.css" />
+    <Content Include="Layouts\Content\NoUpload.css" />
+    <Content Include="Layouts\Content\PendingwithMe.css" />
+    <Content Include="Layouts\Content\RecycleBin.css" />
+    <Content Include="Layouts\Content\SearchResults.css" />
+    <Content Include="Layouts\Content\AddUsers.css" />
+    <Content Include="Layouts\Content\AllItems.css" />
+    <Content Include="Layouts\Content\FileDetail.css" />
+    <Content Include="Layouts\Content\LeftNav.css" />
+    <Content Include="Layouts\Content\nav.css" />
+    <Content Include="Layouts\Content\ReviewsStatistics.css" />
+    <Content Include="Layouts\Content\SetMax.css" />
+    <Content Include="Layouts\Content\SPMain.css" />
+    <Content Include="Layouts\Content\GroupMembers.css" />
+    <Content Include="Layouts\Content\UserGroups.css" />
+    <Content Include="Layouts\DepartDownloadsReport.aspx" />
+    <Content Include="Layouts\DepartmentUploadsReport.aspx" />
+    <Content Include="Layouts\DocumentsScoreReport.aspx" />
+    <Content Include="Layouts\EditUsers.aspx" />
+    <Content Include="Layouts\FileDetail.aspx" />
+    <Content Include="Layouts\FileDownload.aspx" />
+    <Content Include="Layouts\GKSData.aspx" />
+    <Content Include="Layouts\MoFileView.aspx" />
+    <Content Include="Layouts\FolderTree.aspx" />
+    <Content Include="Layouts\GetNav.aspx" />
+    <Content Include="Layouts\GroupMembers.aspx" />
+    <Content Include="Layouts\LatestFiles.aspx" />
+    <Content Include="Layouts\LogList.aspx" />
+    <Content Include="Layouts\MblDownload.aspx" />
+    <Content Include="Layouts\MostDownLoadFiles.aspx" />
+    <Content Include="Layouts\MostDownloadsReport.aspx" />
+    <Content Include="Layouts\MulDownload.aspx" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\bootstrap-table-all.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\bootstrap-table-all.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\bootstrap-table-locale-all.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\bootstrap-table-locale-all.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\bootstrap-table-zh-CN.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\bootstrap-table.css" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\bootstrap-table.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\bootstrap-table.min.css" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\bootstrap-table.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\angular\bootstrap-table-angular.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\angular\bootstrap-table-angular.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\cookie\bootstrap-table-cookie.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\cookie\bootstrap-table-cookie.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\editable\bootstrap-table-editable.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\editable\bootstrap-table-editable.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\export\bootstrap-table-export.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\export\bootstrap-table-export.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\export\tableExport.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\filter-control\bootstrap-table-filter-control.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\filter-control\bootstrap-table-filter-control.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\filter\bootstrap-table-filter.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\filter\bootstrap-table-filter.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\flat-json\bootstrap-table-flat-json.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\flat-json\bootstrap-table-flat-json.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\key-events\bootstrap-table-key-events.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\key-events\bootstrap-table-key-events.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\mobile\bootstrap-table-mobile.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\mobile\bootstrap-table-mobile.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\multiple-sort\bootstrap-table-multiple-sort.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\multiple-sort\bootstrap-table-multiple-sort.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\natural-sorting\bootstrap-table-natural-sorting.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\natural-sorting\bootstrap-table-natural-sorting.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\reorder-columns\bootstrap-table-reorder-columns.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\reorder-columns\bootstrap-table-reorder-columns.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\reorder-rows\bootstrap-table-reorder-rows.css" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\reorder-rows\bootstrap-table-reorder-rows.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\reorder-rows\bootstrap-table-reorder-rows.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\resizable\bootstrap-table-resizable.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\resizable\bootstrap-table-resizable.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\toolbar\bootstrap-table-toolbar.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\extensions\toolbar\bootstrap-table-toolbar.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ar-SA.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ar-SA.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ca-ES.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ca-ES.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-cs-CZ.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-cs-CZ.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-da-DK.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-da-DK.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-de-DE.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-de-DE.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-el-GR.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-el-GR.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-en-US.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-en-US.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-AR.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-AR.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-CR.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-CR.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-ES.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-ES.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-MX.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-MX.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-NI.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-NI.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-SP.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-es-SP.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-fa-IR.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-fa-IR.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-fr-BE.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-fr-BE.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-fr-FR.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-fr-FR.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-hu-HU.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-hu-HU.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-it-IT.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-it-IT.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ja-JP.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ja-JP.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ka-GE.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ka-GE.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ko-KR.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ko-KR.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ms-MY.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ms-MY.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-nb-NO.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-nb-NO.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-nl-NL.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-nl-NL.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-pl-PL.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-pl-PL.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-pt-BR.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-pt-BR.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-pt-PT.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-pt-PT.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ro-RO.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ro-RO.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ru-RU.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ru-RU.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-sk-SK.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-sk-SK.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-sv-SE.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-sv-SE.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-th-TH.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-th-TH.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-tr-TR.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-tr-TR.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-uk-UA.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-uk-UA.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ur-PK.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-ur-PK.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-vi-VN.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-vi-VN.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-zh-CN.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-zh-CN.min.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-zh-TW.js" />
+    <Content Include="Layouts\Plugins\Bootstrap-table\locale\bootstrap-table-zh-TW.min.js" />
+    <Content Include="Layouts\Plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Layouts\Plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Layouts\Plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Layouts\Plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Layouts\Plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Layouts\Plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Layouts\Plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Layouts\Plugins\bootstrap\js\npm.js" />
+    <Content Include="Layouts\Plugins\DropKick\css\blank_theme.css" />
+    <Content Include="Layouts\Plugins\DropKick\css\dropkick.css" />
+    <Content Include="Layouts\Plugins\DropKick\gulpfile.js" />
+    <Content Include="Layouts\Plugins\DropKick\index.html" />
+    <Content Include="Layouts\Plugins\DropKick\jquery.dropkick-min.js" />
+    <Content Include="Layouts\Plugins\DropKick\jquery.dropkick.js" />
+    <Content Include="Layouts\Plugins\flexslider\flexslider.css" />
+    <Content Include="Layouts\Plugins\flexslider\images\arr.png" />
+    <Content Include="Layouts\Plugins\flexslider\images\next.png" />
+    <Content Include="Layouts\Plugins\flexslider\images\prev.png" />
+    <Content Include="Layouts\Plugins\flexslider\images\sc1.jpg" />
+    <Content Include="Layouts\Plugins\flexslider\images\sc2.jpg" />
+    <Content Include="Layouts\Plugins\flexslider\images\sc3.jpg" />
+    <Content Include="Layouts\Plugins\flexslider\images\sc4.jpg" />
+    <Content Include="Layouts\Plugins\flexslider\images\sc5.jpg" />
+    <Content Include="Layouts\Plugins\flexslider\images\sc6.jpg" />
+    <Content Include="Layouts\Plugins\flexslider\jquery.flexslider-min.js" />
+    <Content Include="Layouts\Plugins\hcharts\export-xls.js" />
+    <Content Include="Layouts\Plugins\hcharts\exporting.js" />
+    <Content Include="Layouts\Plugins\hcharts\highcharts.js" />
+    <Content Include="Layouts\Plugins\hcharts\no-data-to-display.src.js" />
+    <Content Include="Layouts\Plugins\laydate-v5\laydate\laydate.js" />
+    <Content Include="Layouts\Plugins\laydate-v5\laydate\theme\default\font\iconfont.svg" />
+    <Content Include="Layouts\Plugins\laydate-v5\laydate\theme\default\laydate.css" />
+    <Content Include="Layouts\Plugins\laydate-v5\test.html" />
+    <Content Include="Layouts\Plugins\layer\extend\layer.ext.js" />
+    <Content Include="Layouts\Plugins\layer\layer.js" />
+    <Content Include="Layouts\Plugins\layer\skin\default\icon-ext.png" />
+    <Content Include="Layouts\Plugins\layer\skin\default\icon.png" />
+    <Content Include="Layouts\Plugins\layer\skin\default\loading-0.gif" />
+    <Content Include="Layouts\Plugins\layer\skin\default\loading-1.gif" />
+    <Content Include="Layouts\Plugins\layer\skin\default\loading-2.gif" />
+    <Content Include="Layouts\Plugins\layer\skin\layer.css" />
+    <Content Include="Layouts\Plugins\layer\skin\layer.ext.css" />
+    <Content Include="Layouts\Plugins\page\index.html" />
+    <Content Include="Layouts\Plugins\page\jquery-1.9.1.min.js" />
+    <Content Include="Layouts\Plugins\page\jquery.page.js" />
+    <Content Include="Layouts\Plugins\page\page.css" />
+    <Content Include="Layouts\Plugins\starScore\css\star-rating.css" />
+    <Content Include="Layouts\Plugins\starScore\index.html" />
+    <Content Include="Layouts\Plugins\starScore\js\star-rating.js" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\api.js" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\common.css" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\common_ie6.css" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\apiMenu.gif" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\apiMenu.png" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\background.jpg" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\chinese.png" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\close.png" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\contact-bg.png" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\english.png" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\header-bg.png" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\lightbulb.png" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\overlay_arrow.gif" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\overlay_arrow.png" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\overlay_bg.png" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\overlay_close_IE6.gif" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\zTreeStandard.gif" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\img\zTreeStandard.png" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\jquery-1.6.2.min.js" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\jquery.ztree.core-3.5.js" />
+    <Content Include="Layouts\Plugins\zTree\api\apiCss\zTreeStyleForApi.css" />
+    <Content Include="Layouts\Plugins\zTree\api\API_cn.html" />
+    <Content Include="Layouts\Plugins\zTree\api\API_en.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\fn.zTree.destroy.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\fn.zTree.getZTreeObj.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\fn.zTree.init.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\fn.zTree._z.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.async.autoParam.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.async.contentType.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.async.dataFilter.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.async.dataType.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.async.enable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.async.otherParam.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.async.type.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.async.url.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeAsync.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeCheck.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeCollapse.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeDblClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeDrag.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeDragOpen.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeDrop.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeEditName.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeExpand.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeMouseDown.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeMouseUp.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeRemove.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeRename.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.beforeRightClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onAsyncError.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onAsyncSuccess.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onCheck.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onCollapse.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onDblClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onDrag.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onDragMove.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onDrop.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onExpand.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onMouseDown.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onMouseUp.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onNodeCreated.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onRemove.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onRename.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.callback.onRightClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.check.autoCheckTrigger.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.check.chkboxType.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.check.chkDisabledInherit.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.check.chkStyle.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.check.enable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.check.nocheckInherit.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.check.radioType.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.data.keep.leaf.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.data.keep.parent.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.data.key.checked.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.data.key.children.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.data.key.name.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.data.key.title.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.data.key.url.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.data.simpleData.enable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.data.simpleData.idKey.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.data.simpleData.pIdKey.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.data.simpleData.rootPId.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.drag.autoExpandTrigger.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.drag.autoOpenTime.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.drag.borderMax.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.drag.borderMin.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.drag.inner.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.drag.isCopy.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.drag.isMove.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.drag.maxShowNodeNum.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.drag.minMoveSize.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.drag.next.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.drag.prev.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.editNameSelectAll.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.enable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.removeTitle.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.renameTitle.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.showRemoveBtn.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.edit.showRenameBtn.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.treeId.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.treeObj.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.addDiyDom.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.addHoverDom.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.autoCancelSelected.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.dblClickExpand.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.expandSpeed.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.fontCss.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.nameIsHTML.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.removeHoverDom.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.selectedMulti.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.showIcon.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.showLine.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.showTitle.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\setting.view.txtSelectedEnable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.checked.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.checkedOld.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.check_Child_State.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.check_Focus.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.children.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.chkDisabled.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.click.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.diy.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.editNameFlag.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.getCheckStatus.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.getIndex.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.getNextNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.getParentNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.getPath.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.getPreNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.halfCheck.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.icon.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.iconClose.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.iconOpen.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.iconSkin.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.isAjaxing.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.isFirstNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.isHidden.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.isHover.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.isLastNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.isParent.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.level.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.name.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.nocheck.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.open.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.parentTId.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.target.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.tId.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.url.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\treeNode.zAsync.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.addNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.cancelEditName.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.cancelSelectedNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.checkAllNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.checkNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.copyNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.destroy.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.editName.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.expandAll.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.expandNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.getChangeCheckedNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.getCheckedNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.getNodeByParam.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.getNodeByTId.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.getNodeIndex.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.getNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.getNodesByFilter.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.getNodesByParam.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.getNodesByParamFuzzy.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.getSelectedNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.hideNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.hideNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.moveNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.reAsyncChildNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.refresh.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.removeChildNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.removeNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.selectNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.setChkDisabled.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.setEditable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.setting.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.showNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.showNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.transformToArray.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.transformTozTreeNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\cn\zTreeObj.updateNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\fn.zTree.destroy.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\fn.zTree.getZTreeObj.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\fn.zTree.init.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\fn.zTree._z.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.async.autoParam.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.async.contentType.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.async.dataFilter.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.async.dataType.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.async.enable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.async.otherParam.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.async.type.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.async.url.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeAsync.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeCheck.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeCollapse.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeDblClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeDrag.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeDragOpen.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeDrop.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeEditName.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeExpand.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeMouseDown.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeMouseUp.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeRemove.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeRename.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.beforeRightClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onAsyncError.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onAsyncSuccess.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onCheck.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onCollapse.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onDblClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onDrag.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onDragMove.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onDrop.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onExpand.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onMouseDown.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onMouseUp.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onNodeCreated.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onRemove.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onRename.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.callback.onRightClick.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.check.autoCheckTrigger.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.check.chkboxType.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.check.chkDisabledInherit.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.check.chkStyle.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.check.enable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.check.nocheckInherit.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.check.radioType.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.data.keep.leaf.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.data.keep.parent.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.data.key.checked.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.data.key.children.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.data.key.name.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.data.key.title.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.data.key.url.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.data.simpleData.enable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.data.simpleData.idKey.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.data.simpleData.pIdKey.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.data.simpleData.rootPId.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.drag.autoExpandTrigger.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.drag.autoOpenTime.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.drag.borderMax.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.drag.borderMin.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.drag.inner.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.drag.isCopy.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.drag.isMove.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.drag.maxShowNodeNum.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.drag.minMoveSize.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.drag.next.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.drag.prev.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.editNameSelectAll.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.enable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.removeTitle.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.renameTitle.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.showRemoveBtn.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.edit.showRenameBtn.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.treeId.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.treeObj.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.addDiyDom.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.addHoverDom.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.autoCancelSelected.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.dblClickExpand.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.expandSpeed.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.fontCss.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.nameIsHTML.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.removeHoverDom.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.selectedMulti.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.showIcon.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.showLine.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.showTitle.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\setting.view.txtSelectedEnable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.checked.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.checkedOld.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.check_Child_State.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.check_Focus.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.children.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.chkDisabled.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.click.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.diy.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.editNameFlag.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.getCheckStatus.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.getIndex.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.getNextNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.getParentNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.getPath.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.getPreNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.halfCheck.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.icon.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.iconClose.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.iconOpen.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.iconSkin.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.isAjaxing.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.isFirstNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.isHidden.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.isHover.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.isLastNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.isParent.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.level.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.name.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.nocheck.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.open.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.parentTId.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.target.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.tId.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.url.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\treeNode.zAsync.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.addNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.cancelEditName.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.cancelSelectedNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.checkAllNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.checkNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.copyNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.destroy.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.editName.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.expandAll.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.expandNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.getChangeCheckedNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.getCheckedNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.getNodeByParam.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.getNodeByTId.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.getNodeIndex.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.getNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.getNodesByFilter.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.getNodesByParam.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.getNodesByParamFuzzy.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.getSelectedNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.hideNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.hideNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.moveNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.reAsyncChildNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.refresh.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.removeChildNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.removeNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.selectNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.setChkDisabled.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.setEditable.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.setting.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.showNode.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.showNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.transformToArray.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.transformTozTreeNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\api\en\zTreeObj.updateNode.html" />
+    <Content Include="Layouts\Plugins\zTree\css\awesomeStyle\awesome.css" />
+    <Content Include="Layouts\Plugins\zTree\css\awesomeStyle\img\loading.gif" />
+    <Content Include="Layouts\Plugins\zTree\css\demo.css" />
+    <Content Include="Layouts\Plugins\zTree\css\metroStyle\img\line_conn.png" />
+    <Content Include="Layouts\Plugins\zTree\css\metroStyle\img\loading.gif" />
+    <Content Include="Layouts\Plugins\zTree\css\metroStyle\img\metro.gif" />
+    <Content Include="Layouts\Plugins\zTree\css\metroStyle\img\metro.png" />
+    <Content Include="Layouts\Plugins\zTree\css\metroStyle\metroStyle.css" />
+    <Content Include="Layouts\Plugins\zTree\css\OutLookCss.css" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\close.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\closeS.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\loading.gif" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\open.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\openS.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="Layouts\Plugins\zTree\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\bigdata\common.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\bigdata\diy_async.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\bigdata\page.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\async.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\async_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\click.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\custom_font.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\custom_icon.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\custom_iconSkin.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\expand.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\noicon.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\noline.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\otherMouse.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\searchNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\simpleData.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\standardData.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\update_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\core\url.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\excheck\checkbox.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\excheck\checkbox_chkDisabled.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\excheck\checkbox_count.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\excheck\checkbox_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\excheck\checkbox_halfCheck.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\excheck\checkbox_nocheck.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\excheck\radio.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\excheck\radio_chkDisabled.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\excheck\radio_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\excheck\radio_halfCheck.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\excheck\radio_nocheck.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\exedit\async_edit.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\exedit\drag.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\exedit\drag_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\exedit\drag_super.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\exedit\edit.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\exedit\edit_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\exedit\edit_super.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\exedit\multiTree.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\exhide\checkbox.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\exhide\common.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\exhide\radio.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\index.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\asyncForAll.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\awesome.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\checkbox_radio.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\diydom.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\dragWithOther.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\left_menu.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\left_menuForOutLook.gif" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\left_menuForOutLook.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\left_menuForOutLook.png" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\metro.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\oneclick.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\oneroot.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\rightClickMenu.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\select_menu.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\select_menu_checkbox.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\select_menu_radio.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\cn\super\singlepath.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\bigdata\common.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\bigdata\diy_async.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\bigdata\page.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\async.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\async_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\click.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\custom_font.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\custom_icon.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\custom_iconSkin.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\expand.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\noicon.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\noline.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\otherMouse.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\searchNodes.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\simpleData.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\standardData.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\update_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\core\url.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\excheck\checkbox.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\excheck\checkbox_chkDisabled.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\excheck\checkbox_count.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\excheck\checkbox_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\excheck\checkbox_halfCheck.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\excheck\checkbox_nocheck.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\excheck\radio.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\excheck\radio_chkDisabled.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\excheck\radio_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\excheck\radio_halfCheck.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\excheck\radio_nocheck.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\exedit\async_edit.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\exedit\drag.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\exedit\drag_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\exedit\drag_super.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\exedit\edit.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\exedit\edit_fun.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\exedit\edit_super.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\exedit\multiTree.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\exhide\checkbox.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\exhide\common.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\exhide\radio.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\index.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\asyncForAll.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\awesome.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\checkbox_radio.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\diydom.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\dragWithOther.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\left_menu.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\left_menuForOutLook.gif" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\left_menuForOutLook.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\left_menuForOutLook.png" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\metro.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\oneclick.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\oneroot.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\rightClickMenu.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\select_menu.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\select_menu_checkbox.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\select_menu_radio.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\singlepath.html" />
+    <Content Include="Layouts\Plugins\zTree\demo\en\super\ztree.html" />
+    <Content Include="Layouts\Plugins\zTree\img\close.png" />
+    <Content Include="Layouts\Plugins\zTree\img\empty.png" />
+    <Content Include="Layouts\Plugins\zTree\img\left_menuForOutLook.gif" />
+    <Content Include="Layouts\Plugins\zTree\img\left_menuForOutLook.png" />
+    <Content Include="Layouts\Plugins\zTree\img\open.png" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery-1.4.4.min.js" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery.ztree.all-3.5.js" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery.ztree.all-3.5.min.js" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery.ztree.core-3.5.js" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery.ztree.core-3.5.min.js" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery.ztree.excheck-3.5.js" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery.ztree.excheck-3.5.min.js" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery.ztree.exedit-3.5.js" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery.ztree.exedit-3.5.min.js" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery.ztree.exedit.js" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery.ztree.exhide-3.5.js" />
+    <Content Include="Layouts\Plugins\zTree\js\jquery.ztree.exhide-3.5.min.js" />
+    <Content Include="Layouts\Plugins\zTree\log v3.x.txt" />
+    <Content Include="Layouts\RegionFiles.aspx" />
+    <Content Include="Layouts\ReturnFolder.aspx" />
+    <Content Include="Layouts\Scripts\FolderTree.js" />
+    <Content Include="Layouts\Scripts\show3Btn.js" />
+    <Content Include="Layouts\Scripts\UploadFiles.js" />
+    <Content Include="Layouts\Scripts\aclinv.js" />
+    <Content Include="Layouts\Scripts\defaultfolder.js" />
+    <Content Include="Layouts\Scripts\DepartUploadsReport.js" />
+    <Content Include="Layouts\Scripts\DepartDownloadsReport.js" />
+    <Content Include="Layouts\Scripts\DocumentsScoreReport.js" />
+    <Content Include="Layouts\Scripts\EditForm.js" />
+    <Content Include="Layouts\Scripts\EditUsers.js" />
+    <Content Include="Layouts\Scripts\AddUsers.js" />
+    <Content Include="Layouts\Scripts\ExternalUserLogin.js" />
+    <Content Include="Layouts\Scripts\FeedbackList.js" />
+    <Content Include="Layouts\Scripts\FileLogs.js" />
+    <Content Include="Layouts\Scripts\jquery.SP.RegionCountry.js" />
+    <Content Include="Layouts\Scripts\LogList.js" />
+    <Content Include="Layouts\Scripts\Latest.js" />
+    <Content Include="Layouts\Scripts\MostDownloads.js" />
+    <Content Include="Layouts\Scripts\PendingwithMeFile.js" />
+    <Content Include="Layouts\Scripts\MyShareCatalog.js" />
+    <Content Include="Layouts\Scripts\ChangeDepartment.js" />
+    <Content Include="Layouts\Scripts\UserUploadsReport.js" />
+    <Content Include="Layouts\Scripts\MostDownloadsReport.js" />
+    <Content Include="Layouts\Scripts\RegionFiles.js" />
+    <Content Include="Layouts\Scripts\RejectedRequest.js" />
+    <Content Include="Layouts\Scripts\GroupMembers.js" />
+    <Content Include="Layouts\Scripts\MyDownload.js" />
+    <Content Include="Layouts\Scripts\ApprovedRequest.js" />
+    <Content Include="Layouts\Scripts\PendingwithMe.js" />
+    <Content Include="Layouts\Scripts\MyRequest.js" />
+    <Content Include="Layouts\Scripts\SearchResults.js" />
+    <Content Include="Layouts\Scripts\Authorization.js" />
+    <Content Include="Layouts\Scripts\PermissionSettings.js" />
+    <Content Include="Layouts\Scripts\SelectExternalUser.js" />
+    <Content Include="Layouts\Scripts\ShareCatalogList.js" />
+    <Content Include="Layouts\Scripts\SubscribeDirectoryList.js" />
+    <Content Include="Layouts\Scripts\SubscribeList.js" />
+    <Content Include="Layouts\Scripts\SystemUseReport.js" />
+    <Content Include="Layouts\Scripts\ReportManage.js" />
+    <Content Include="Layouts\Scripts\Whitelist.js" />
+    <Content Include="Layouts\Scripts\UserGroup.js" />
+    <Content Include="Layouts\Scripts\Carousel.js" />
+    <Content Include="Layouts\Scripts\Lastest.js" />
+    <Content Include="Layouts\Scripts\AllItems.js" />
+    <Content Include="Layouts\Scripts\BrowsingHistory.js" />
+    <Content Include="Layouts\Scripts\FileDetail.js" />
+    <Content Include="Layouts\Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Layouts\Scripts\LeftNav.js" />
+    <Content Include="Layouts\Scripts\Master.js" />
+    <Content Include="Layouts\Scripts\MostDown.js" />
+    <Content Include="Layouts\Scripts\MyUpload.js" />
+    <Content Include="Layouts\Scripts\ReviewsStatistics.js" />
+    <Content Include="Layouts\Scripts\SettingLeftNav.js" />
+    <Content Include="Layouts\SearchResults.aspx" />
+    <Content Include="Layouts\SelectExternalUser.aspx" />
+    <Content Include="Layouts\SubscribeDownload.aspx" />
+    <Content Include="Layouts\SubscribeMulDownload.aspx" />
+    <Content Include="Layouts\SystemUseReport.aspx" />
+    <Content Include="Layouts\UploadFiles.aspx" />
+    <Content Include="Layouts\UserGroups.aspx" />
+    <Content Include="Layouts\UserUploadsReport.aspx" />
+    <Content Include="Layouts\ViewError.aspx" />
+    <Content Include="Layouts\WebPartContent.aspx" />
+    <Content Include="Master\Elements.xml" />
+    <Content Include="Master\Sample.txt" />
+    <Content Include="Model\Elements.xml" />
+    <Content Include="Model\Sample.txt" />
+    <Content Include="CustomWebPart\Elements.xml" />
+    <Content Include="CustomWebPart\Right\Elements.xml" />
+    <Content Include="CustomWebPart\Right\Right.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>Right.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="CustomWebPart\Sample.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

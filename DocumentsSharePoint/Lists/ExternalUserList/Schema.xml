@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="ExternalUserList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/ExternalUserList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100cdffad027db14862a7cc70a6651a58be" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{343f5c9c-73bd-4b11-a132-d3c94c70be70}" Name="Account" /><FieldRef ID="{98383b47-38eb-4295-8ff1-ecb792ec12fb}" Name="PassWord" /><FieldRef ID="{ebdee6ac-106b-4b6b-b205-3a9d7a1134d9}" Name="Region" /><FieldRef ID="{1e3d7c1c-cfa8-44e7-9107-b9fbb6a68ff4}" Name="EnabledState" /><FieldRef ID="{7c5deb54-1d43-411c-bd2f-6fd25246c0d7}" Name="ObjectName" /><FieldRef ID="{21bab717-05e1-4e8f-af2f-278af7ab9eb0}" Name="Country" /><FieldRef ID="{66048dce-f5c9-469a-9b49-614474cd3ae2}" Name="Tag" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="Account" ID="{343f5c9c-73bd-4b11-a132-d3c94c70be70}" DisplayName="Account" Type="Text" /><Field Name="PassWord" ID="{98383b47-38eb-4295-8ff1-ecb792ec12fb}" DisplayName="PassWord" Type="Text" /><Field Name="Region" ID="{ebdee6ac-106b-4b6b-b205-3a9d7a1134d9}" DisplayName="Region" Type="Text" /><Field Name="EnabledState" ID="{1e3d7c1c-cfa8-44e7-9107-b9fbb6a68ff4}" DisplayName="EnabledState" Type="Boolean" /><Field Name="ObjectName" ID="{7c5deb54-1d43-411c-bd2f-6fd25246c0d7}" DisplayName="ObjectName" Type="Text" /><Field Name="Country" ID="{21bab717-05e1-4e8f-af2f-278af7ab9eb0}" DisplayName="Country" Type="Text" /><Field Name="Tag" ID="{66048dce-f5c9-469a-9b49-614474cd3ae2}" DisplayName="Tag" Type="Text" /></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="ObjectName" /><FieldRef Name="Account" /><FieldRef Name="PassWord" /><FieldRef Name="Region" /><FieldRef Name="EnabledState" /><FieldRef Name="Country" /><FieldRef Name="Tag" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

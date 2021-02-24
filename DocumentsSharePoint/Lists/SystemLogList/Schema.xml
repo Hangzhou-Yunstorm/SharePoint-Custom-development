@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="SystemLogList" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/SystemLogList" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100ec830718469e4ec88bda9f53e77dec41" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{ad38df51-2778-4a79-997c-3a206fd69f7c}" Name="ObjectName" /><FieldRef ID="{b6490679-5bd6-4118-afc4-ed6a35e2b2e7}" Name="Operate" /><FieldRef ID="{d1f75d2d-cbda-435e-a104-a2db925faad9}" Name="ObjectType" /><FieldRef ID="{b585b2cd-ae81-42be-b13d-f5ff77b79c47}" Name="Operator" /><FieldRef ID="{2dcfbd19-1a74-4f6f-9af7-0e558ac796c4}" Name="Operater" /><FieldRef ID="{1077d6f8-0ffe-4f69-9cac-fb4c0950b91c}" Name="Department1" /><FieldRef ID="{e5ea5f86-26b5-4f97-a8de-9e3fc1af9d1c}" Name="DepartmentId" /><FieldRef ID="{8ccc11e9-c766-48b9-ba7b-5d5549d8ad3f}" Name="OperatorId" /><FieldRef ID="{98d379ae-8bf3-486c-8cbe-5e1d29a1c18f}" Name="ServerIP" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="ObjectName" ID="{ad38df51-2778-4a79-997c-3a206fd69f7c}" DisplayName="ObjectName" Type="Text" /><Field Name="Operate" ID="{b6490679-5bd6-4118-afc4-ed6a35e2b2e7}" DisplayName="Operate" Type="Text" /><Field Name="ObjectType" ID="{d1f75d2d-cbda-435e-a104-a2db925faad9}" DisplayName="ObjectType" Type="Text" /><Field Name="Operator" ID="{b585b2cd-ae81-42be-b13d-f5ff77b79c47}" DisplayName="Operator" Type="Text" /><Field Name="Operater" ID="{2dcfbd19-1a74-4f6f-9af7-0e558ac796c4}" DisplayName="Operater" Type="User" List="UserInfo" /><Field Name="Department1" ID="{1077d6f8-0ffe-4f69-9cac-fb4c0950b91c}" DisplayName="Department" Type="Text" /><Field Name="DepartmentId" ID="{e5ea5f86-26b5-4f97-a8de-9e3fc1af9d1c}" DisplayName="DepartmentId" Type="Text" /><Field Name="OperatorId" ID="{8ccc11e9-c766-48b9-ba7b-5d5549d8ad3f}" DisplayName="OperatorId" Type="Text" /><Field Name="ServerIP" ID="{98d379ae-8bf3-486c-8cbe-5e1d29a1c18f}" DisplayName="ServerIP" Type="Text" /></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitle"></FieldRef><FieldRef Name="ObjectName" /><FieldRef Name="Operate" /><FieldRef Name="ObjectType" /><FieldRef Name="Operator" /><FieldRef Name="Operater" /><FieldRef Name="Department1" /><FieldRef Name="DepartmentId" /><FieldRef Name="OperatorId" /><FieldRef Name="ServerIP" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

@@ -1,0 +1,83 @@
+
+                    #region 区域默认文件夹
+                    if (!string.IsNullOrEmpty(region))
+                    {
+                        try
+                        {
+                            var rFolders = web.GetFolderByServerRelativeUrl("/" + Constant.documents + "/Region/" + region).Folders;
+                            context.Load(rFolders);
+                            context.ExecuteQuery();
+
+                            if (rFolders != null && rFolders.Count > 0)
+                            {
+                                foreach (Folder rFolder in rFolders)
+                                {
+                                    var rItem = rFolder.ListItemAllFields;
+                                    context.Load(rItem);
+                                    context.ExecuteQuery();
+
+                                    var fieldValues = rItem.FieldValues;
+                                    if (Convert.ToBoolean(fieldValues["IsDefault"]))
+                                    {
+                                        // 获取文件属性值
+                                        string name = fieldValues["FileLeafRef"].ToString();
+                                        string hideName = name;
+                                        var created = Convert.ToDateTime(fieldValues["Created"]).ToString("yyyy-MM-dd");
+                                        var creator = ((FieldLookupValue)(fieldValues["Author"])).LookupValue;
+                                        string fId = fieldValues["FID"].ToString();
+                                        string path = fieldValues["FileRef"].ToString();
+
+                                        // 构造图标
+                                        string iconUrl = "<img src='/Images/Icons/folder.gif' onerror=\"javascript: this.src = '/Images/Icons/icgen.gif'\" />";
+                                        name = "<a onclick=\"OpenFolder('" + fId + "')\" title='" + name + "'>" + name + "</a>";
+                                        GetFoldes(context, rItem, pId, "system", "", "Never expire", folders, true, 1);
+                                        // 加入集合
+                                        lists.Add(GetModel(name, hideName, fId, pId, path, iconUrl, created, creator, "system", "", 1, true, "Never expire", "", 1));
+                                    }
+                                }
+                            }
+                        }
+                        catch { }
+                        #region 国家默认文件夹
+                        if (!string.IsNullOrEmpty(country))
+                        {
+                            try
+                            {
+                                var cFolders = web.GetFolderByServerRelativeUrl("/" + Constant.documents + "/Region/" + region + "/" + country).Folders;
+                                context.Load(cFolders);
+                                context.ExecuteQuery();
+
+                                if (cFolders != null && cFolders.Count > 0)
+                                {
+                                    foreach (Folder cFolder in cFolders)
+                                    {
+                                        var cItem = cFolder.ListItemAllFields;
+                                        context.Load(cItem);
+                                        context.ExecuteQuery();
+
+                                        var cfieldValues = cItem.FieldValues;
+                                        if (Convert.ToBoolean(cfieldValues["IsDefault"]))
+                                        {
+                                            // 获取文件属性值
+                                            string name = cfieldValues["FileLeafRef"].ToString();
+                                            string hideName = name;
+                                            var created = Convert.ToDateTime(cfieldValues["Created"]).ToString("yyyy-MM-dd");
+                                            var creator = ((FieldLookupValue)(cfieldValues["Author"])).LookupValue;
+                                            string fId = cfieldValues["FID"].ToString();
+                                            string path = cfieldValues["FileRef"].ToString();
+
+                                            // 构造图标
+                                            string iconUrl = "<img src='/Images/Icons/folder.gif' onerror=\"javascript: this.src = '/Images/Icons/icgen.gif'\" />";
+                                            name = "<a onclick=\"OpenFolder('" + fId + "')\" title='" + name + "'>" + name + "</a>";
+                                            GetFoldes(context, cItem, pId, "system", "", "Never expire", folders, true, 1);
+                                            // 加入集合
+                                            lists.Add(GetModel(name, hideName, fId, pId, path, iconUrl, created, creator, "system", "", 1, true, "Never expire", "", 1));
+                                        }
+                                    }
+                                }
+                            }
+                            catch { }
+                        }
+                        #endregion
+                    }
+                    #endregion

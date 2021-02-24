@@ -1,0 +1,178 @@
+﻿.foldDetail {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.topGeneral {
+    width: 100%;
+    height: 60px;
+}
+
+.fileAuthor {
+    display: inline-block;
+    border-right: 1px solid #4e4e4e;
+    padding-right: 20px;
+}
+
+#fileName {
+    margin-right: 20px;
+}
+
+#downloadCount {
+    padding-left: 20px;
+}
+
+.mainContent {
+    width: 100%;
+    overflow: hidden;
+}
+
+#scoreText, #clickCount {
+    border-right: 1px solid #4e4e4e;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.fileGeneral {
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+    .fileGeneral h5 {
+        display: inline-block;
+    }
+
+    .fileGeneral a {
+        float: right;
+        cursor: pointer;
+    }
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mr30 {
+    margin-right: 30px;
+}
+
+.rating-sm {
+    display: inline-block;
+}
+
+.leftContent {
+    float: left;
+    width: 710px;
+    margin-right: 40px;
+}
+
+.leftContentDetail {
+    width: 710px;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+    .leftContentDetail h3 {
+        margin: 0;
+        text-align: center;
+        line-height: 40px;
+        width: 710px;
+    }
+
+.watermark_div {
+    width: 710px;
+    max-height: 400px;
+    background: url("/_layouts/15/GetWaterMark.ashx") repeat;
+}
+
+    .watermark_div img, .watermark_div video {
+        width: 100%;
+        max-width: 100%;
+        filter: alpha(opacity=90);
+        moz-opacity: .90;
+        opacity: .90;
+    }
+
+.rightComments {
+    float: left;
+    width: 350px;
+    padding-top: 35px;
+}
+
+.yourCom {
+    overflow: hidden;
+}
+
+.score {
+    margin: 0;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+#commentText {
+    height: 200px;
+    width: 100%;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.label {
+    color: #f30808;
+    font-size: 14px;
+}
+
+.yourCom .submitComment {
+    float: right;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+#download {
+    cursor: pointer;
+}
+
+.othersCom {
+    overflow: hidden;
+}
+
+.user_comment {
+    border-bottom: 1px dashed #ccc;
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+.othersCom .oTitle {
+    color: #4e4e4e;
+}
+
+.oReviewer {
+    display: inline-block;
+    padding-right: 20px;
+    border-right: 1px solid #4e4e4e;
+    color: #4e4e4e;
+    font-size: 14px;
+}
+
+.oScore {
+    display: inline-block;
+    font-size: 14px;
+    color: #4e4e4e;
+    margin-left: 10px;
+}
+
+.oCommentTxt {
+    width: 100%;
+    max-height: 64px;
+    overflow: auto;
+    font-size: 14px;
+    color: #4e4e4e;
+}
+
+.oCommentTime {
+    float: right;
+    font-size: 14px;
+    color: #4e4e4e;
+}

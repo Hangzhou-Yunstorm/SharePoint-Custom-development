@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{413E0E84-4944-4A12-9558-400912A36518}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lists</RootNamespace>
+    <AssemblyName>Lists</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>16.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <MinimumOfficeToolsVersion>14.5</MinimumOfficeToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Browsing History\Browsing History Instance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{89cfb6d2-69ef-45a2-a972-f615c1d66ec7}</SharePointProjectItemId>
+    </None>
+    <None Include="Browsing History\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c825dc50-c411-4144-b000-488440bca3c4}</SharePointProjectItemId>
+    </None>
+    <None Include="Comments List\Comments List Instance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ca633ce2-8021-437e-b802-6110ee833cc4}</SharePointProjectItemId>
+    </None>
+    <None Include="Comments List\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5d0ced17-e295-40e8-93f4-4a3200ac8c5c}</SharePointProjectItemId>
+    </None>
+    <None Include="DocumentCalculated\DocumentCalculatedInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9441beef-72b3-4bc8-9a1e-13738ab51df9}</SharePointProjectItemId>
+    </None>
+    <None Include="DocumentCalculated\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3390a3a9-ebff-477d-b4ca-079fc61d93fb}</SharePointProjectItemId>
+    </None>
+    <None Include="DocumentStatisticalDetails\DocumentStatisticalDetailsInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e91695da-657c-4307-b616-0791735cfb33}</SharePointProjectItemId>
+    </None>
+    <None Include="DocumentStatisticalDetails\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{38464133-cda1-4c40-8b9e-78a286dcfaad}</SharePointProjectItemId>
+    </None>
+    <None Include="Download History\Download History Instance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{83490c36-fe01-4388-9f60-42708bc29690}</SharePointProjectItemId>
+    </None>
+    <None Include="Download History\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{551a846a-edaf-4ebc-a324-bb0a2be69308}</SharePointProjectItemId>
+    </None>
+    <None Include="ErrorLogList\ErrorLogListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5b6c74a9-5138-4141-a623-fa7ba9ef8cd9}</SharePointProjectItemId>
+    </None>
+    <None Include="ErrorLogList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{8239094b-6594-4639-85c7-34cc1c1a8f92}</SharePointProjectItemId>
+    </None>
+    <None Include="ExternalUserList\ExternalUserListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{63281da2-3b81-47d5-849b-a4a77511075d}</SharePointProjectItemId>
+    </None>
+    <None Include="ExternalUserList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{15a12800-f3ad-4550-b328-9cf047f2a46a}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature10\Feature10.feature">
+      <FeatureId>{6d7d1482-da0d-4829-89eb-728517bd96db}</FeatureId>
+    </None>
+    <None Include="Features\Feature11\Feature11.feature">
+      <FeatureId>{325ecd61-c475-412b-8663-1bc947b6e4fc}</FeatureId>
+    </None>
+    <None Include="Features\Feature12\Feature12.feature">
+      <FeatureId>{b58b27e9-4372-4745-81dc-d3da8cc9fbf4}</FeatureId>
+    </None>
+    <None Include="Features\Feature13\Feature13.feature">
+      <FeatureId>{f1778f76-9e0b-4727-84c5-5be7b89ae77a}</FeatureId>
+    </None>
+    <None Include="Features\Feature14\Feature14.feature">
+      <FeatureId>{421de83d-cd2c-45a7-9105-23ab6e157626}</FeatureId>
+    </None>
+    <None Include="Features\Feature15\Feature15.feature">
+      <FeatureId>{96cbc4f1-617d-4aba-9f11-87be3838eda9}</FeatureId>
+    </None>
+    <None Include="Features\Feature16\Feature16.feature">
+      <FeatureId>{2bf3d5d0-d3dc-4cf9-bee8-34c3518e3e03}</FeatureId>
+    </None>
+    <None Include="Features\Feature17\Feature17.feature">
+      <FeatureId>{095b259b-125f-43a2-a575-18f646ce7697}</FeatureId>
+    </None>
+    <None Include="Features\Feature18\Feature18.feature">
+      <FeatureId>{fec2ddeb-25af-42b0-944e-c072e34d5bac}</FeatureId>
+    </None>
+    <None Include="Features\Feature19\Feature19.feature">
+      <FeatureId>{14286563-c7bb-4260-aa95-acd28fa948f8}</FeatureId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{ab57f5e0-05c9-414f-97cc-cdc5f020ef53}</FeatureId>
+    </None>
+    <None Include="Features\Feature20\Feature20.feature">
+      <FeatureId>{4edd6774-087f-4e73-b4e5-b47157f86601}</FeatureId>
+    </None>
+    <None Include="Features\Feature21\Feature21.feature">
+      <FeatureId>{cc17bc4e-3f81-45c3-90e9-cd6a4a3cf0af}</FeatureId>
+    </None>
+    <None Include="Features\Feature22\Feature22.feature">
+      <FeatureId>{ee9b12b9-b26d-44bd-8bbc-558b58c18b19}</FeatureId>
+    </None>
+    <None Include="Features\Feature23\Feature23.feature">
+      <FeatureId>{b82a2147-e66f-4ad3-9a57-2df00ae1089c}</FeatureId>
+    </None>
+    <None Include="Features\Feature24\Feature24.feature">
+      <FeatureId>{1cc94dfa-f809-4780-9921-efa251569444}</FeatureId>
+    </None>
+    <None Include="Features\Feature2\Feature2.feature">
+      <FeatureId>{ebb5eae1-917e-4f0d-912c-af683c6dbe67}</FeatureId>
+    </None>
+    <None Include="Features\Feature3\Feature3.feature">
+      <FeatureId>{d19d7e2d-e3bb-4d07-8acd-ed54f92d084b}</FeatureId>
+    </None>
+    <None Include="Features\Feature4\Feature4.feature">
+      <FeatureId>{9cec5f76-e48f-4c02-a754-333a93471672}</FeatureId>
+    </None>
+    <None Include="Features\Feature5\Feature5.feature">
+      <FeatureId>{d0fd0f54-3366-42c6-bb29-cfab90d6969f}</FeatureId>
+    </None>
+    <None Include="Features\Feature6\Feature6.feature">
+      <FeatureId>{1c411f41-2075-40e6-a462-0c2d86010382}</FeatureId>
+    </None>
+    <None Include="Features\Feature7\Feature7.feature">
+      <FeatureId>{809d628b-ef2b-447d-a381-4fed2acdb269}</FeatureId>
+    </None>
+    <None Include="Features\Feature8\Feature8.feature">
+      <FeatureId>{edfe6fd2-1a12-479f-934b-342cb6a946ca}</FeatureId>
+    </None>
+    <None Include="Features\Feature9\Feature9.feature">
+      <FeatureId>{1733ca08-0e04-4490-b1d4-b88c93584e79}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{1cf9e003-4e79-43b0-9ff2-5972b9c5a4f7}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="ReportManageList\ReportManageListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bb0873f1-bea9-4ca3-a3ce-caf715d860df}</SharePointProjectItemId>
+    </None>
+    <None Include="ReportManageList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0611e256-2578-47cc-a5a4-d36d001fd260}</SharePointProjectItemId>
+    </None>
+    <None Include="RMSHistory\RMSHistoryInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c088401a-5a92-4f43-b943-51fd44d925da}</SharePointProjectItemId>
+    </None>
+    <None Include="RMSHistory\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{62153b35-3280-4689-8ba7-4ab1769b8662}</SharePointProjectItemId>
+    </None>
+    <None Include="RMSTask\RMSTaskInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{77022be9-8c29-4a83-b4b7-7df417f01118}</SharePointProjectItemId>
+    </None>
+    <None Include="RMSTask\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{169a4d64-52a4-4901-8da3-3a803c6d19d9}</SharePointProjectItemId>
+    </None>
+    <None Include="Score List\Score List Instance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{2491c8d1-df26-42c2-a3ea-0113474843c6}</SharePointProjectItemId>
+    </None>
+    <None Include="Score List\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4de07673-5949-4681-87e2-d13282ab9eaa}</SharePointProjectItemId>
+    </None>
+    <None Include="ShareCatalogList\ShareCatalogListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7c80e8c2-5376-4d6e-979c-14b32e36a2c4}</SharePointProjectItemId>
+    </None>
+    <None Include="ShareCatalogList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f2205d80-5bbc-416a-9493-f89837c35100}</SharePointProjectItemId>
+    </None>
+    <None Include="SubscribeDirectoryList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4343229b-4d8b-40e6-9e43-dd6d20a03fa1}</SharePointProjectItemId>
+    </None>
+    <None Include="SubscribeDirectoryList\SubscribeDirectoryListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d25d67e6-cd18-4238-8972-0c7d3865c320}</SharePointProjectItemId>
+    </None>
+    <None Include="SubscribeList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7f850ce9-c2d5-40ec-8e01-762d5593461f}</SharePointProjectItemId>
+    </None>
+    <None Include="SubscribeList\SubscribeListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bbab1038-a732-4171-a7bb-f2dd2d62942d}</SharePointProjectItemId>
+    </None>
+    <None Include="Suggestion\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{87b025d1-3e48-41dd-9533-6da61f137d42}</SharePointProjectItemId>
+    </None>
+    <None Include="Suggestion\SuggestionInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{30493b35-7c9b-4f49-b11b-3359600b4ae4}</SharePointProjectItemId>
+    </None>
+    <None Include="SystemLogList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9ed51d99-9e6b-45fe-ab92-4ecc5db02a57}</SharePointProjectItemId>
+    </None>
+    <None Include="SystemLogList\SystemLogListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0bf4ebae-ebed-404d-a4cd-8f1876774fde}</SharePointProjectItemId>
+    </None>
+    <None Include="UserEmaiPushList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0ac2ed52-1610-42bb-8f9a-f884c5773d9c}</SharePointProjectItemId>
+    </None>
+    <None Include="UserEmaiPushList\UserEmaiPushListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{81fd0abf-5540-4e36-8d3d-e415ccb395a1}</SharePointProjectItemId>
+    </None>
+    <None Include="WhiteList\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fa9c2942-f3c1-488a-8d55-1b0f58505594}</SharePointProjectItemId>
+    </None>
+    <None Include="WhiteList\WhiteListInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f5dadc51-593a-40db-9b80-e72f004502c2}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Browsing History\Browsing History Instance\Elements.xml" />
+    <Content Include="Browsing History\Elements.xml" />
+    <Content Include="Browsing History\Schema.xml" />
+    <Content Include="Comments List\Comments List Instance\Elements.xml" />
+    <Content Include="Comments List\Elements.xml" />
+    <Content Include="Comments List\Schema.xml" />
+    <Content Include="DocumentCalculated\DocumentCalculatedInstance\Elements.xml" />
+    <Content Include="DocumentCalculated\Elements.xml" />
+    <Content Include="DocumentCalculated\Schema.xml" />
+    <Content Include="DocumentStatisticalDetails\DocumentStatisticalDetailsInstance\Elements.xml" />
+    <Content Include="DocumentStatisticalDetails\Elements.xml" />
+    <Content Include="DocumentStatisticalDetails\Schema.xml" />
+    <Content Include="Download History\Download History Instance\Elements.xml" />
+    <Content Include="Download History\Elements.xml" />
+    <Content Include="Download History\Schema.xml" />
+    <Content Include="ErrorLogList\Elements.xml" />
+    <Content Include="ErrorLogList\ErrorLogListInstance\Elements.xml" />
+    <Content Include="ErrorLogList\Schema.xml" />
+    <Content Include="ExternalUserList\Elements.xml" />
+    <Content Include="ExternalUserList\ExternalUserListInstance\Elements.xml" />
+    <Content Include="ExternalUserList\Schema.xml" />
+    <Content Include="Features\Feature10\Feature10.Template.xml">
+      <DependentUpon>Feature10.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature11\Feature11.Template.xml">
+      <DependentUpon>Feature11.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature12\Feature12.Template.xml">
+      <DependentUpon>Feature12.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature13\Feature13.Template.xml">
+      <DependentUpon>Feature13.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature14\Feature14.Template.xml">
+      <DependentUpon>Feature14.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature15\Feature15.Template.xml">
+      <DependentUpon>Feature15.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature16\Feature16.Template.xml">
+      <DependentUpon>Feature16.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature17\Feature17.Template.xml">
+      <DependentUpon>Feature17.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature18\Feature18.Template.xml">
+      <DependentUpon>Feature18.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature19\Feature19.Template.xml">
+      <DependentUpon>Feature19.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature20\Feature20.Template.xml">
+      <DependentUpon>Feature20.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature21\Feature21.Template.xml">
+      <DependentUpon>Feature21.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature22\Feature22.Template.xml">
+      <DependentUpon>Feature22.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature23\Feature23.Template.xml">
+      <DependentUpon>Feature23.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature24\Feature24.Template.xml">
+      <DependentUpon>Feature24.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature2\Feature2.Template.xml">
+      <DependentUpon>Feature2.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature3\Feature3.Template.xml">
+      <DependentUpon>Feature3.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature4\Feature4.Template.xml">
+      <DependentUpon>Feature4.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature5\Feature5.Template.xml">
+      <DependentUpon>Feature5.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature6\Feature6.Template.xml">
+      <DependentUpon>Feature6.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature7\Feature7.Template.xml">
+      <DependentUpon>Feature7.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature8\Feature8.Template.xml">
+      <DependentUpon>Feature8.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Feature9\Feature9.Template.xml">
+      <DependentUpon>Feature9.feature</DependentUpon>
+    </Content>
+    <Content Include="ReportManageList\Elements.xml" />
+    <Content Include="ReportManageList\ReportManageListInstance\Elements.xml" />
+    <Content Include="ReportManageList\Schema.xml" />
+    <Content Include="RMSHistory\Elements.xml" />
+    <Content Include="RMSHistory\RMSHistoryInstance\Elements.xml" />
+    <Content Include="RMSHistory\Schema.xml" />
+    <Content Include="RMSTask\Elements.xml" />
+    <Content Include="RMSTask\RMSTaskInstance\Elements.xml" />
+    <Content Include="RMSTask\Schema.xml" />
+    <Content Include="Score List\Elements.xml" />
+    <Content Include="Score List\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Score List\Score List Instance\Elements.xml" />
+    <Content Include="ShareCatalogList\Elements.xml" />
+    <Content Include="ShareCatalogList\Schema.xml" />
+    <Content Include="ShareCatalogList\ShareCatalogListInstance\Elements.xml" />
+    <Content Include="SubscribeDirectoryList\Elements.xml" />
+    <Content Include="SubscribeDirectoryList\Schema.xml" />
+    <Content Include="SubscribeDirectoryList\SubscribeDirectoryListInstance\Elements.xml" />
+    <Content Include="SubscribeList\Elements.xml" />
+    <Content Include="SubscribeList\Schema.xml" />
+    <Content Include="SubscribeList\SubscribeListInstance\Elements.xml" />
+    <Content Include="Suggestion\Elements.xml" />
+    <Content Include="Suggestion\Schema.xml" />
+    <Content Include="Suggestion\SuggestionInstance\Elements.xml" />
+    <Content Include="SystemLogList\Elements.xml" />
+    <Content Include="SystemLogList\Schema.xml" />
+    <Content Include="SystemLogList\SystemLogListInstance\Elements.xml" />
+    <Content Include="UserEmaiPushList\Elements.xml" />
+    <Content Include="UserEmaiPushList\Schema.xml" />
+    <Content Include="UserEmaiPushList\UserEmaiPushListInstance\Elements.xml" />
+    <Content Include="WhiteList\Elements.xml" />
+    <Content Include="WhiteList\Schema.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WhiteList\WhiteListInstance\Elements.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

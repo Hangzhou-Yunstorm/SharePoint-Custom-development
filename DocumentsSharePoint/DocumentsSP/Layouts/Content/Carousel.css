@@ -1,0 +1,8 @@
+﻿/*隐藏ECB菜单*/
+.ms-core-menu-list {
+    display: none;
+}
+
+/*#CSRListViewControlDivWPQ1 {
+    display: block;
+}*/

@@ -1,0 +1,41 @@
+﻿
+.contentwrapper {
+    /*max-width: 1200px;*/
+    max-width: 100%;
+    margin: 5px auto 0;
+}
+
+.latest_files {
+    max-width: 90%;
+    padding: 8px 32px;
+}
+
+.fixed-table-container {
+    border: 0;
+}
+
+#file_table tr th {
+    border: 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #595959;
+}
+
+#file_table tr td {
+    border: 0;
+    word-break: break-all;
+    font-size: 14px;
+}
+
+#file_table thead tr {
+    border-bottom: 1px solid #595959;
+}
+
+#file_table tbody tr {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+#r_title {
+    font-size: 24px;
+    font-weight: 100;
+}

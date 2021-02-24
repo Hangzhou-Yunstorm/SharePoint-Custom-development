@@ -1,0 +1,5 @@
+﻿/*-- Hide Drag & Drop --*/
+caption.ms-dragDropAttract {
+    caption-side: bottom;
+    display: none !important;
+}

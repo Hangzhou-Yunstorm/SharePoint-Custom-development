@@ -1,0 +1,46 @@
+﻿
+/*显示ECB菜单*/
+.ms-core-menu-list{	display:inherit;}
+
+/*隐藏ECB中的分割线*/
+.ms-core-menu-separator hr{display:none}
+
+/*隐藏ECB中指定的Li标签*/
+/*document*/
+li.ms-core-menu-item[text="高级"] ,li.ms-core-menu-item[text="Advanced"] 
+{display:none !important;}
+li.ms-core-menu-item[text="属性"] ,li.ms-core-menu-item[text="Properties"] 
+{display:none !important;}
+li.ms-core-menu-item[text="下载"] ,li.ms-core-menu-item[text="Download"] 
+{display:none !important;}
+li.ms-core-menu-item[text="共享"] ,li.ms-core-menu-item[text="Share"] 
+{display:none !important;}
+li.ms-core-menu-item[text="复制"] ,li.ms-core-menu-item[text="Copy"] 
+{display:none !important;}
+li.ms-core-menu-item[text="在 Word 中打开"] ,li.ms-core-menu-item[text="Open in Word"] ,li.ms-core-menu-item[text="Open in Word Online"]
+{display:none !important;}
+li.ms-core-menu-item[text="在 Excel 中打开"] ,li.ms-core-menu-item[text="Open in Excel"] ,li.ms-core-menu-item[text="Open in Excel Online"] 
+{display:none !important;}
+li.ms-core-menu-item[text="在 PowerPoint 中打开"] ,li.ms-core-menu-item[text="Open in PowerPoint"] ,li.ms-core-menu-item[text="Open in PowerPoint Online"] 
+{display:none !important;}
+li.ms-core-menu-item[text="在浏览器中打开"] ，li.ms-core-menu-item[text="Open in Browser"] 
+{display:none !important;}
+li.ms-core-menu-item[text="在浏览器中查看"] ，li.ms-core-menu-item[text="View in Browser"] 
+{display:none !important;}
+/*List*/
+li.ms-core-menu-item[text="编辑项目"] ,li.ms-core-menu-item[text="Edit Item"] 
+{display:none !important;}
+li.ms-core-menu-item[text="查看项目"] ,li.ms-core-menu-item[text="View Item"] 
+{display:none !important;}
+li.ms-core-menu-item[text="删除项目"] ,li.ms-core-menu-item[text="Delete Item"] 
+{display:none !important;}
+/*图片*/
+li.ms-core-menu-item[text="打开"] ,li.ms-core-menu-item[text="Open"] 
+{display:none !important;}
+/*List*/
+li.ms-core-menu-item[text="重命名"] ,li.ms-core-menu-item[text="Rename"] 
+{display:none !important;}
+li.ms-core-menu-item[text="删除"] ,li.ms-core-menu-item[text="Delete"] 
+{display:none !important;}
+li.ms-core-menu-item[text="版本历史记录"] ,li.ms-core-menu-item[text="Version History"] 
+{display:none !important;}

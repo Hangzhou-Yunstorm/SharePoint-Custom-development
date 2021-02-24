@@ -1,0 +1,75 @@
+1、admin/myupload
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/MyUpload.js"></script>
+
+2、admin/mydownload
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/MyDownload.js"></script>
+
+3、admin/myrequest
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/MyRequest.js"></script>
+
+4、admin/PendingwithMe
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/PendingwithMe.js"></script>
+
+5、admin/ApprovedRequest
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/ApprovedRequest.js"></script>
+
+6、admin/RejectedRequest
+<script type="text/javascript" src="/_layouts/15/Scripts/leftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/RejectedRequest.js"></script>
+
+7、Authorization
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/Authorization.js"></script>
+
+8、PermissionSettings 涙
+
+9、Whitelist.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/Whitelist.js"></script>
+
+10、FileLogs
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/FileLogs.js"></script>
+
+11、DirectoryLogs
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/DirectoryLogs.js"></script>
+
+12、UserLogs
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/UserLogs.js"></script>
+
+13、Home Gallery.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/SettingLeftNav.js"></script>
+<script type="text/javascript" src="/_layouts/15/Scripts/Carousel.js"></script>
+
+14、Lists/Documents/Forms/AllItems.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/AllItems.js"></script>
+<script type="text/javascript" src="/_layouts/15/Plugins/zTree/js/jquery.ztree.all-3.5.min.js"></script>
+
+15、/Lists/Browsing%20History/AllItems.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/BrowsingHistory.js"></script>
+
+16、/Lists/Documents/Forms/LatestFiles.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/Lastest.js"></script>
+
+17、/Lists/Documents/Forms/MostDownLoadFiles.aspx
+<script type="text/javascript" src="/_layouts/15/Scripts/MostDown.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+

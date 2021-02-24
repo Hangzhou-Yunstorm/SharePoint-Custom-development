@@ -1,0 +1,108 @@
+﻿
+.inline {
+    display: inline-block !important;
+}
+
+#mbx {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+#folder_tree {
+    height: 640px;
+    width: 220px;
+    margin-top: 5px;
+    background-color: #f7f7f7;
+    overflow: auto;
+    padding-top: 20px;
+}
+
+#left_title {
+    min-height: 34px;
+    line-height: 34px;
+    padding-left: 20px;
+    background-color: #0089CD;
+    font-size: 16px;
+    color: #fff;
+    /* margin: 0px 20px; */
+    /* text-align: center; */
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+    #left_title a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+.bars {
+    float: right !important;
+}
+
+#toolbar {
+    cursor: pointer;
+}
+
+    #toolbar img {
+        border-radius: 2px;
+    }
+
+.search {
+    float: left !important;
+    margin-left: 10px;
+}
+
+    .search .form-control {
+        border-radius: 2px;
+        font-style: italic;
+        padding: 6px;
+    }
+
+#f_table {
+    min-height: 600px;
+    width: 980px;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.fixed-table-container {
+    border: 0;
+}
+
+#file_table {
+    border-bottom: 0;
+    font-family: "Microsoft YaHei";
+}
+
+    #file_table a {
+        word-break: break-all;
+        cursor: pointer;
+    }
+
+    #file_table tr {
+        border-top: 1px solid #efefef;
+        border-bottom: 1px solid #efefef;
+    }
+
+    #file_table thead tr th {
+        font-weight: 700;
+        color: #4f4f4f;
+    }
+
+    #file_table tr td {
+        border: 0;
+    }
+
+    #file_table tr th {
+        border: 0;
+    }
+
+/*排序按钮位置*/
+.fixed-table-container thead th .sortable {
+    /*background-position: 100px 10px !important;*/
+    padding-left: 8px !important;
+}
+
+.pagination-detail {
+    margin-left: 10px;
+}

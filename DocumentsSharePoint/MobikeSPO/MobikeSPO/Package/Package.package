@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="111ea5db-bdde-47c0-b7ba-bd458a04fec7" solutionId="111ea5db-bdde-47c0-b7ba-bd458a04fec7" resetWebServer="false" sharePointProductVersion="16.0" name="MobikeSPO" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="a19d1912-e124-4c72-92f5-1513b03c0a05" />
+    <featureReference itemId="35d5db28-e608-47c8-9c55-102b296551d9" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="1d4c3e7d-0c3b-44bc-8545-bf1c61fea654" />
+    <projectItemReference itemId="e08a8e3c-e3e3-4a41-95e5-441ae699b902" />
+  </projectItems>
+</package>

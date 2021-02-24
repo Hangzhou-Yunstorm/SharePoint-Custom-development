@@ -1,0 +1,61 @@
+﻿li.ms-core-menu-item[text="版本历史记录"], li.ms-core-menu-item[text="Version History"] {
+    display: inherit !important;
+}
+
+/*切换格式*/
+#change_mark {
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    /*margin-right: 10px;*/
+    width: 200px;
+    float: right;
+}
+
+    #change_mark #f_ul {
+        position: absolute;
+        z-index: 1;
+    }
+
+    #change_mark #f_li {
+        /*margin: 0 auto;*/
+        position: absolute;
+        left: 55px;
+        width: 10px;
+        height: 10px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: -7px;
+        /* border: 1px solid black; */
+        border-top: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+    }
+
+    #change_mark ul li {
+        display: block;
+        height: 30px;
+        width: 120px;
+        line-height: 30px;
+        position: relative;
+    }
+
+        #change_mark ul li a {
+            text-decoration: none;
+        }
+
+        #change_mark ul li ul li {
+            float: none;
+            background-color: #fdfdfd;
+        }
+
+        #change_mark ul li ul {
+            position: absolute;
+            top: 30px;
+            left: 45px;
+            display: none;
+            border: 1px solid #ccc;
+        }
+
+        #change_mark ul li:hover ul {
+            display: block;
+        }

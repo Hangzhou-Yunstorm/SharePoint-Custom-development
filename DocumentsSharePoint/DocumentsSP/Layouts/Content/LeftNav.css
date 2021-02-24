@@ -1,0 +1,115 @@
+﻿
+.review {
+    width: 100%;
+    overflow: hidden;
+}
+
+#scriptWPQ1 tr {
+    max-width: 960px !important;
+}
+
+#scriptWPQ1 td {
+    max-width: 200px !important;
+    word-wrap: break-word;
+}
+
+#CSRListViewControlDivWPQ1 {
+    display: none;
+}
+
+.leftTree {
+    float: left;
+    width: 220px;
+    height: 520px;
+    /*border: 1px solid #eee;*/
+    margin-right: 20px;
+    background-color: #eee;
+    box-sizing: border-box;
+}
+
+    .leftTree ul li {
+        list-style: none;
+    }
+
+    .leftTree h4 {
+        height: 32px;
+        line-height: 32px;
+        padding-left: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .leftTree .myTitle {
+        width: 100%;
+        height: 34px;
+        line-height: 34px;
+        padding-left: 20px;
+        background-color: #0E60AC;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: #fff;
+        font-weight: normal;
+        margin: 0;
+    }
+
+.second a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #4e4e4e;
+    padding-left: 40px;
+}
+
+    .second a :active {
+        color: blue;
+    }
+
+.primaryDir {
+    margin-bottom: 10px;
+}
+
+.leftTree .upBtn {
+    display: block;
+    margin: 30px auto 0;
+    width: 160px;
+    cursor: pointer;
+}
+
+    .leftTree .upBtn:hover {
+        background-color: #199ED8;
+    }
+
+li.ms-core-menu-item[text="重命名"],li.ms-core-menu-item[text="Rename"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="删除"],li.ms-core-menu-item[text="Delete"]  {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="版本历史记录"] ,li.ms-core-menu-item[text="Version History"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在 Word 中打开"] ,li.ms-core-menu-item[text="Open in Word"], ,li.ms-core-menu-item[text="Open in Word Online"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在 Excel 中打开"],li.ms-core-menu-item[text="Open in Excel"] ,li.ms-core-menu-item[text="Open in Excel Online"]  {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在 PowerPoint 中打开"],li.ms-core-menu-item[text="Open in PowerPoint"] ,li.ms-core-menu-item[text="Open in PowerPoint Online"]  {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在 浏览器 中打开"] ，li.ms-core-menu-item[text="Open in Browser"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在 浏览器 中查看"] ，li.ms-core-menu-item[text="View in Browser"] {
+    display: none !important;
+}

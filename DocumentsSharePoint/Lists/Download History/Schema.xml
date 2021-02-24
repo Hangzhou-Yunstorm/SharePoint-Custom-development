@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="Download History" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/Download History" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      
+      
+    <ContentType ID="0x0100249fb3241f8044feb2a55a7a135cb5d2" Name="ListFieldsContentType"><FieldRefs><FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" /><FieldRef ID="{27aabce7-ffdb-447a-b523-72241210aa04}" Name="CreateTime" /><FieldRef ID="{0271d73e-3c08-4ab1-9536-d45145b37395}" Name="Creator" /><FieldRef ID="{79a73ecc-fa9a-4a02-8fe5-b3d51f69f6da}" Name="Folder" /><FieldRef ID="{29f1f008-054c-41c6-bf07-603b9214a47b}" Name="Time" /><FieldRef ID="{ee33323f-d02a-4e4f-a4fd-6af5ffc795ac}" Name="FID" /><FieldRef ID="{8eb2509e-fc34-431d-bdf5-2898afbf9214}" Name="FileName" /><FieldRef ID="{c8a6f4d4-5a54-4a67-b677-140401841a85}" Name="IconUrl" /><FieldRef ID="{ba8d6bc1-d830-4590-8523-5adeb97a6351}" Name="UName" /><FieldRef ID="{22033a2b-49f9-4c58-b485-f3a3bb429016}" Name="Department" /><FieldRef ID="{64949c7d-50d6-4ed2-85bf-19eceff4a788}" Name="DepartmentId" /></FieldRefs></ContentType><ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef><ContentTypeRef ID="0x0120" /></ContentTypes>
+    <Fields>
+      
+    <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="FALSE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" /><Field Name="CreateTime" ID="{27aabce7-ffdb-447a-b523-72241210aa04}" DisplayName="CreateTime" Type="DateTime" /><Field Name="Creator" ID="{0271d73e-3c08-4ab1-9536-d45145b37395}" DisplayName="Creator" Type="User" List="UserInfo" /><Field Name="Folder" ID="{79a73ecc-fa9a-4a02-8fe5-b3d51f69f6da}" DisplayName="Folder" Type="URL" /><Field Name="Time" ID="{29f1f008-054c-41c6-bf07-603b9214a47b}" DisplayName="Time" Type="DateTime" /><Field Name="FID" ID="{ee33323f-d02a-4e4f-a4fd-6af5ffc795ac}" DisplayName="FID" Type="Text" /><Field Name="FileName" ID="{8eb2509e-fc34-431d-bdf5-2898afbf9214}" DisplayName="FileName" Type="URL" /><Field Name="IconUrl" ID="{c8a6f4d4-5a54-4a67-b677-140401841a85}" DisplayName="IconUrl" Type="URL" /><Field Name="UName" ID="{ba8d6bc1-d830-4590-8523-5adeb97a6351}" DisplayName="UName" Type="User" List="UserInfo" /><Field Name="Department" ID="{22033a2b-49f9-4c58-b485-f3a3bb429016}" DisplayName="Department" Type="Text" /><Field Name="DepartmentId" ID="{64949c7d-50d6-4ed2-85bf-19eceff4a788}" DisplayName="DepartmentId" Type="Text" /></Fields>
+    <Views>
+      
+      
+    <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="LinkTitleNoMenu"></FieldRef></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="Modified" Ascending="FALSE"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View><View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          
+        <FieldRef Name="Folder" /><FieldRef Name="IconUrl" /><FieldRef Name="FileName" /><FieldRef Name="CreateTime" /><FieldRef Name="Creator" /><FieldRef Name="Time" /><FieldRef Name="FID" /><FieldRef Name="UName" /><FieldRef Name="Department" /><FieldRef Name="DepartmentId" /></ViewFields>
+        <Query>
+          <OrderBy>
+            
+          <FieldRef Name="ID"></FieldRef></OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View></Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

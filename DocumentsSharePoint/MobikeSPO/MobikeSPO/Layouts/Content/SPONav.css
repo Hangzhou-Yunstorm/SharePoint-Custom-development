@@ -1,0 +1,291 @@
+﻿
+/*headerLogout样式*/
+.headerLogout {
+    background-color: #f2f2f2;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: right;
+    box-sizing: border-box;
+    display: none;
+}
+
+    .headerLogout a:hover {
+        text-decoration: none;
+    }
+
+    .headerLogout a:visited {
+        text-decoration: none;
+    }
+
+/*nav样式*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#headNav {
+    /*margin-top: 30px;*/
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    position: relative;
+    z-index: 3;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+ul li {
+    list-style: none;
+}
+
+#headNav .nav .f_li {
+    padding-right: 20px;
+    height:32px;
+}
+
+    #headNav .nav .f_li img {
+        margin-left: 5px;
+    }
+
+#headNav .nav > li {
+    float: left;
+    position: relative;
+}
+
+    #headNav .nav > li a {
+        color: #666666 !important;
+        background-color: #fff !important;
+        display: inline-block;
+        /*padding: 0 20px;*/
+        /*padding-right: 20px;*/
+        font-size: 12px;
+        height:32px;
+    }
+
+    #headNav .nav > li > a:hover {
+        text-decoration: none;
+        color: #0078d7 !important;
+    }
+
+#headNav .nav .secondNav > li a:hover {
+    color: #0078d7 !important;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#headNav .nav .oSecondNav > li a:hover {
+    color: #0078d7 !important;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#headNav .nav > li:hover .secondNav {
+    display: block;
+}
+
+#headNav .nav > li:hover .oSecondNav {
+    display: block;
+}
+
+#headNav .secondNav, #headNav .oSecondNav {
+    display: none;
+    min-width: 100px;
+    position: absolute;
+    top: 33px;
+    left: -5px;
+    padding-right: 6px;
+    border: 1px solid #eee;
+}
+
+    #headNav .secondNav > li {
+        height: 32px;
+        line-height: 32px;
+        /*border-bottom: 1px solid #fff;*/
+        /*padding-left: 5px;*/
+    }
+
+        #headNav .secondNav > li a {
+            /*padding: 0 20px 0 20px;*/
+            padding-left: 6px;
+            width: 100%;
+            white-space: nowrap;
+            /*background: rgba(255, 70, 18, 0.7) !important;*/
+            background: #fff !important;
+            /*color: #fff !important;*/
+            color: #000 !important;
+            border-bottom: 1px solid #eee;
+        }
+
+            #headNav .secondNav > li a:hover {
+                background-color: #eee !important;
+                color: #0078d7 !important;
+                width: 100%;
+            }
+
+#headNav .secondTitle > a {
+    font-size: 14px;
+    font-weight: 400;
+    color: red;
+}
+
+#headNav .oSecondNav > li {
+    float: left;
+    word-break: keep-all;
+    line-height: 32px;
+}
+
+    #headNav .oSecondNav > li a {
+        padding: 0 20px;
+        background: #0078d7 !important;
+        color: #fff !important;
+        width: 100%;
+        border-bottom: 1px solid #fff;
+    }
+
+        #headNav .oSecondNav > li a:hover {
+            background: #fff !important;
+            color: #0078d7 !important;
+        }
+
+/*问号格式*/
+#question_mark {
+    height: 30px;
+    /*display: inline-block;*/
+    display: none;
+    text-align: center;
+}
+
+    #question_mark ul li {
+        display: block;
+        height: 30px;
+        width: 110px;
+        line-height: 30px;
+        position: relative;
+    }
+
+        #question_mark ul li ul li {
+            float: none;
+            background-color: #f2f2f2;
+        }
+
+        #question_mark ul li ul {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            display: none;
+        }
+
+        #question_mark ul li:hover ul {
+            display: block;
+        }
+
+/*footer样式*/
+#ms-belltown-table {
+    padding-bottom: 40px;
+}
+
+.footer {
+    display: none;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 40px;
+    margin-top: -40px; /*等于footer的高度*/
+    clear: both;
+    background: #000;
+}
+
+    .footer .copyright {
+        display: block;
+        width: 1200px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto;
+        color: #fff;
+    }
+
+#page {
+    padding-bottom: 40px;
+}
+
+.contentwrapper {
+    /*max-width: 1200px;*/
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+#ms-belltown-table {
+    margin: 0px auto;
+    max-width: 100%;
+}
+
+#titleAreaRow {
+    /*box-shadow: 0 3px 3px 0 rgba(91,91,91,0.16);*/
+}
+
+#top_email {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    position: relative;
+    background-color: #f4f4f4;
+    height: 40px;
+    white-space: nowrap;
+}
+
+    #top_email .r_span {
+        font-size: 14px;
+        font-weight: 400;
+        color: #333333;
+        position: relative;
+        background: none;
+        border: none;
+        line-height: 40px;
+        min-width: 20px;
+        padding: 0 4px;
+        display: block;
+        float: right;
+        height: 100%;
+    }
+
+#top4 {
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.bottom_div {
+    float: left;
+    width: 300px;
+    margin-right: 12px;
+    margin-top: 50px;
+    height: 265px;
+}
+
+    .bottom_div img {
+        width: 300px;
+        display: block;
+        cursor: pointer;
+        height: 200px;
+    }
+
+    .bottom_div span {
+        width: 300px;
+        display: block;
+        cursor: pointer;
+        text-align: center;
+        font-size: 22px;
+        padding-top: 15px;
+        position: absolute;
+        bottom: 110px;
+    }
+
+        .bottom_div span a {
+            color: #fff;
+            text-decoration: none;
+            text-shadow: #000000 2px 0 0;
+        }
+
+            .bottom_div span a:hover {
+                /*color: #0078d7;*/
+            }

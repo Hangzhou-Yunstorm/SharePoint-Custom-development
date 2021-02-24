@@ -1,0 +1,144 @@
+﻿body {
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+}
+
+.ulSelect {
+    float: left;
+    width: 400px;
+    border-right: 5px solid #f5f5f5;
+}
+
+.ulShow {
+    float: left;
+    width: 420px;
+    height: 380px;
+    overflow: auto;
+}
+
+.ulSelect div div label {
+    display: block;
+    width: 100%;
+    height: 32px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #ded4d4;
+}
+
+.ulA {
+    border-bottom: 2px solid #f5f5f5;
+    width: 100%;
+    height: 30px;
+}
+
+    .ulA a {
+        line-height: 25px;
+        font-size: 14px;
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+
+.ulShow table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .ulShow table thead {
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        text-align: center;
+        background-color: #ded4d4;
+    }
+
+    .ulShow table tbody tr {
+        border-bottom: 1px solid #f6e6e6;
+    }
+
+        .ulShow table tbody tr td {
+            text-align: center;
+            font-size: 14px;
+        }
+
+            .ulShow table tbody tr td img {
+                margin-top: 2px;
+                /*height: 16px;*/
+                cursor: pointer;
+            }
+
+.ulTree {
+    height: 360px;
+    overflow: auto;
+}
+
+.ulSearch {
+    width: 190px;
+    border: 1px solid #f5f5f5;
+    float: left;
+}
+
+    .ulSearch input {
+        width: 175px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 20px;
+        padding: 2px 5px;
+    }
+
+    .ulSearch img {
+        float: right;
+        height: 24px;
+        margin-top: -25px;
+        position: relative;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+.ulShow_handle a {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    background-color: #fff;
+    border: 1px #808080 solid;
+    cursor: pointer;
+    font-family: 'Microsoft YaHei';
+    text-align: center;
+}
+
+    .ulShow_handle a:hover {
+        background-color: #808080;
+        color: #fff;
+    }
+
+.bk_tm {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-color: rgba(225, 225, 225, 0.15);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.ztree li span.button.ico_open, .ztree li span.button.ico_close {
+    display: none;
+}
+
+.ztree li span.button.ico_docu {
+    display: none;
+}
+
+.ztree li span {
+    margin-right: 0 !important;
+}
+
+.ztree li a {
+    padding-right: 4px !important;
+    padding-left: 4px !important;
+}

@@ -1,0 +1,304 @@
+﻿/*最大的有效的div*/
+#s4-bodyContainer {
+    height: auto;
+}
+
+/*导航面包屑*/
+.top_div {
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+/*导航面包屑*/
+.top_a {
+    font-size: 16px;
+}
+
+/*title栏目*/
+#siteIcon {
+    margin-top: 30px;
+}
+
+#img_upload {
+    display: none;
+    margin-left: 10px;
+}
+
+    #img_upload img {
+        cursor: pointer;
+    }
+
+.ms-breadcrumb-box {
+    padding-top: 30px;
+}
+
+.ms-belltown-authenticated .ms-belltown-searcharea {
+    padding-top: 40px;
+}
+
+.ms-srch-sb > input {
+    /*width: 645px;
+    height: 46px;
+    border: 2px solid #0066fe;*/
+}
+
+.ms-pub-contentLayout {
+    margin-top: 0;
+    padding: 0;
+}
+
+.welcome {
+    display: inline-block;
+    cursor: context-menu;
+}
+
+    .welcome span {
+        float: left;
+        height: 28px;
+        line-height: 28px;
+        margin-right: 30px;
+        color: #808080;
+        cursor: default;
+    }
+/*show login*/
+.set {
+    width: 28px;
+    height: 28px;
+    margin-top: 6px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.news {
+    position: relative;
+    display: inline-block;
+    height: 28px;
+    margin-top: 6px;
+    margin-right: 30px;
+}
+
+    .news img {
+        float: left;
+        width: 28px;
+        height: 28px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+.news_num {
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    color: #808080;
+    font-size: 12px;
+}
+
+.myApprove {
+    float: left;
+    height: 18px;
+    min-width: 18px;
+    line-height: 18px;
+    color: #ffffff;
+    font-size: 12px;
+    background-color: #0E60AC;
+    position: absolute;
+    left: 20px;
+    top: -5px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#titlerow {
+    /*padding: 0 5%;*/
+}
+
+#titleAreaBox {
+    padding-bottom: 20px;
+    width: 100%;
+    margin: 0 !important;
+}
+
+.mainLogo {
+    display: block;
+    float: left;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+
+.layoutRight {
+    float: right;
+    text-align: right;
+    display: none;
+    margin-top: 40px;
+}
+
+.mySearchBox {
+    display: inline-block;
+    height: 45px;
+    /*margin-right: 20px;*/
+    margin-right: 0;
+}
+
+.myInputBox {
+    float: left;
+    display: inline-block;
+    border: 2px solid #0E60AC;
+    width: 380px;
+    height: 45px;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+
+.mySearchButton {
+    float: left;
+    height: 45px;
+    cursor: pointer;
+}
+
+    .mySearchButton img {
+        width: 45px;
+        height: 45px;
+    }
+
+.company {
+    float: left;
+    width: auto;
+    height: 41px;
+    margin-top: 38px;
+    margin-right: 20px;
+    vertical-align: super;
+}
+
+    .company a {
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 400;
+        color: #4e4e4e;
+    }
+
+td.ms-list-addnew, td.ms-textXLarge, td.ms-list-addnew-aligntop, td.ms-soften, #WPQ1_ListTitleViewSelectorMenu_Container, .ms-dragDropAttract, #empty-WPQ1, #CSRSaveAsNewViewDivWPQ1 {
+    display: none !important;
+}
+
+#CSRListViewControlDivWPQ1 {
+    margin-top: 5px;
+}
+
+#scriptPagingWPQ1 {
+    float: right;
+}
+
+.ms-core-menu-list {
+    display: none;
+}
+
+.ms-list-itemLink-td {
+    display: none;
+}
+
+th[role*="presentation"] {
+    display: none;
+}
+
+.myApprove {
+    display: none;
+}
+
+#UpScopeLinkTop, #UpScopeLinkBottom, #ctl00_PlaceHolderMain_ctl00_csr_NavButton, #ctl00_PlaceHolderMain_ctl04_LargeFileDiv, .ms-srch-result-personalResult {
+    display: none !important;
+}
+
+#ctl00_PlaceHolderMain_SelectListSection {
+    display: none !important;
+}
+
+ul#ResultFooter {
+    display: none !important;
+}
+
+div#ResultCount {
+    margin-bottom: 30px;
+}
+
+/*显示ECB菜单*/
+.ms-core-menu-list {
+    display: inherit;
+}
+
+/*隐藏ECB中的分割线*/
+.ms-core-menu-separator hr {
+    display: none;
+}
+
+/*隐藏ECB中指定的Li标签*/
+/*document*/
+li.ms-core-menu-item[text="高级"], li.ms-core-menu-item[text="Advanced"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="属性"], li.ms-core-menu-item[text="Properties"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="下载"], li.ms-core-menu-item[text="Download"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="共享"], li.ms-core-menu-item[text="Share"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="复制"], li.ms-core-menu-item[text="Copy"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在 Word 中打开"], li.ms-core-menu-item[text="Open in Word"], li.ms-core-menu-item[text="Open in Word Online"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在 Excel 中打开"], li.ms-core-menu-item[text="Open in Excel"], li.ms-core-menu-item[text="Open in Excel Online"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在 PowerPoint Online 中打开"], li.ms-core-menu-item[text="Open in PowerPoint"], li.ms-core-menu-item[text="Open in PowerPoint Online"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在 Word Online 中打开"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在 Excel Online 中打开"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在 PowerPoint 中打开"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在浏览器中打开"] ，li.ms-core-menu-item[text="Open in Browser"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="在浏览器中查看"] ，li.ms-core-menu-item[text="View in Browser"] {
+    display: none !important;
+}
+
+/*List*/
+li.ms-core-menu-item[text="编辑项目"], li.ms-core-menu-item[text="Edit Item"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="查看项目"], li.ms-core-menu-item[text="View Item"] {
+    display: none !important;
+}
+
+li.ms-core-menu-item[text="删除项目"], li.ms-core-menu-item[text="Delete Item"] {
+    /*display: none !important;*/
+    display: none;
+}
+
+/*图片*/
+li.ms-core-menu-item[text="打开"], li.ms-core-menu-item[text="Open"] {
+    display: none !important;
+}

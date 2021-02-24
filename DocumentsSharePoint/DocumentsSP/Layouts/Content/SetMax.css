@@ -1,0 +1,16 @@
+﻿#scriptWPQ1 thead {
+    max-width: 1200px !important;
+}
+
+#scriptWPQ1 tbody {
+    max-width: 1200px !important;
+}
+
+#scriptWPQ1 tr {
+    max-width: 1200px !important;
+}
+
+#scriptWPQ1 td {
+    max-width: 200px !important;
+    word-wrap: break-word;
+}

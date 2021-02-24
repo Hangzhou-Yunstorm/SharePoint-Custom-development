@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.ListDefinition" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="RMSDocuments\" Type="ElementManifest" />
+    <ProjectItemFile Source="Schema.xml" Target="RMSDocuments\" Type="ElementFile" />
+    <ProjectItemFile Source="EditDlg.htm" Target="RMSDocuments\" Type="ElementFile" />
+    <ProjectItemFile Source="FileDlg.htm" Target="RMSDocuments\" Type="ElementFile" />
+    <ProjectItemFile Source="Repair.aspx" Target="RMSDocuments\" Type="ElementFile" />
+    <ProjectItemFile Source="Upload.aspx" Target="RMSDocuments\" Type="ElementFile" />
+  </Files>
+  <ExtensionData>
+    <ExtensionDataItem Key="Microsoft.VisualStudio.SharePoint.ListSettings.ListFieldsContentTypeID" Value="0x0101004e8064807c6349798a80f4fe2522e17e" />
+  </ExtensionData>
+</ProjectItem>

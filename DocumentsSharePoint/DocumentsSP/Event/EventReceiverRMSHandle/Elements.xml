@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Receivers ListTemplateId="101">
+      <Receiver>
+        <Name>EventReceiverRMSHandleItemAdded</Name>
+        <Type>ItemAdded</Type>
+        <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+        <Class>DocumentsSP.Event.EventReceiverRMSHandle.EventReceiverRMSHandle</Class>
+        <SequenceNumber>10000</SequenceNumber>
+      </Receiver>
+      <Receiver>
+        <Name>EventReceiverRMSHandleItemUpdated</Name>
+        <Type>ItemUpdated</Type>
+        <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+        <Class>DocumentsSP.Event.EventReceiverRMSHandle.EventReceiverRMSHandle</Class>
+        <SequenceNumber>10000</SequenceNumber>
+      </Receiver>
+      <Receiver>
+        <Name>EventReceiverRMSHandleItemDeleted</Name>
+        <Type>ItemDeleted</Type>
+        <Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+        <Class>DocumentsSP.Event.EventReceiverRMSHandle.EventReceiverRMSHandle</Class>
+        <SequenceNumber>10000</SequenceNumber>
+      </Receiver>
+  <Receiver>
+<Name>EventReceiverRMSHandleItemAdding</Name>
+<Type>ItemAdding</Type>
+<Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+<Class>DocumentsSP.Event.EventReceiverRMSHandle.EventReceiverRMSHandle</Class>
+<SequenceNumber>10000</SequenceNumber>
+</Receiver>
+<Receiver>
+<Name>EventReceiverRMSHandleItemUpdating</Name>
+<Type>ItemUpdating</Type>
+<Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+<Class>DocumentsSP.Event.EventReceiverRMSHandle.EventReceiverRMSHandle</Class>
+<SequenceNumber>10000</SequenceNumber>
+</Receiver>
+<Receiver>
+<Name>EventReceiverRMSHandleItemDeleting</Name>
+<Type>ItemDeleting</Type>
+<Assembly>$SharePoint.Project.AssemblyFullName$</Assembly>
+<Class>DocumentsSP.Event.EventReceiverRMSHandle.EventReceiverRMSHandle</Class>
+<SequenceNumber>10000</SequenceNumber>
+</Receiver>
+</Receivers>
+</Elements>

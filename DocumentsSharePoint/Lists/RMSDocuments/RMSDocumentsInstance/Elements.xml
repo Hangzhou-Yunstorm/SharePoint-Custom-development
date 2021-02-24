@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="RMSDocuments" OnQuickLaunch="TRUE" TemplateType="101" Url="Lists/RMSDocuments" Description="我的列表实例"></ListInstance>
+</Elements>

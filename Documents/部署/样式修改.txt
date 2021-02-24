@@ -1,0 +1,31 @@
+OWA：
+PPT：
+路径 C:\Program Files\Microsoft Office Web Apps\WebPPTViewer\pptresources\2052\stylesRead.css
+新增：
+.cui-herodock a{display:none;}
+a[id$='.PrintToPdf-Medium20']{display:inline-block;}
+
+
+路径 C:\Program Files\Microsoft Office Web Apps\WebPPTViewer\pptresources\2052\stylesChromeless.css
+新增 .cui-fa-sm,#ChromelessStatusBar.Options-Small14{display:none !important;}
+
+Excel：
+路径 C:\Program Files\Microsoft Office Web Apps\ExcelServicesWfe\_layouts\Resources\2052\EwrDefault.css
+新增 #m_excelWebRenderer_ewaCtl_flyoutExcelEdit-Medium20,#m_excelWebRenderer_ewaCtl_flyoutExcelShare-Medium20,#m_excelWebRenderer_ewaCtl_flyoutExcelData-Medium20,#m_excelWebRenderer_ewaCtl_ExcelViewerHeroDockOverflowMenuLauncher-Small20{display:none !important;}
+
+Word：
+路径：C:\Program Files\Microsoft Office Web Apps\WebWordViewer\Resources\2052\WordViewer.css
+新增 #ControlMenu-Small14,.cui-fa-sm,#jbtnToggleViewMode-Medium20,#flyoutWordViewerEdit-Medium20,#btnFileSharing-Medium20,#msDownload{display:none !important;}
+修改 .cui-menusection-separator的heigh为0px
+
+搜索结果预览（去掉预览框下面的打开、关注、编辑等）：
+路径：C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\TEMPLATE\LAYOUTS\2052\STYLES\Themable\SEARCHV15.CSS
+新增.ms-srch-hover-actions的属性display:none
+
+
+其他：
+文档库选人控件高度：
+C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\template\layouts\2052\STYLES\Themable\oslo.css
+修改 .sp-peoplepicker-autoFillContainer .sp-autoFill-scroll
+max-height:180px !important;
+min-height:180px !important;

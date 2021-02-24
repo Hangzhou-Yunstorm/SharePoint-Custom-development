@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="3defc209-3c2b-4ef5-ae69-1272defd5e8a" solutionId="3defc209-3c2b-4ef5-ae69-1272defd5e8a" resetWebServer="false" sharePointProductVersion="16.0" name="SPLists" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="8eb61690-2d0d-49f0-ac83-60109bb42fbf" />
+    <featureReference itemId="55741398-a7e6-459a-974b-b55701c97e10" />
+    <featureReference itemId="ab93c67a-e40e-407e-a6e3-1bbcc1c081ab" />
+  </features>
+</package>
